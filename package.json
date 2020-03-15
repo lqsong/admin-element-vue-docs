@@ -1,0 +1,17 @@
+{
+  "name": "admin-element-vue-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "npx vuepress dev docs",
+    "docs:build": "npx vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.3.1"
+  }
+}
