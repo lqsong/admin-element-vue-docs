@@ -34,7 +34,10 @@
   - ECharts 图表
 ```
 
-<br/>
+**[Default version demo](http://demo.admin-element-vue.liqingsong.cc/)**             |  **[BgImg version demo](http://bgimg-demo.admin-element-vue.liqingsong.cc/)**
+:-------------------------:|:-------------------------:
+![Default version demo](https://gitee.com/lqsong/public/raw/master/admin-element-vue/admin1.png)  |  ![BgImg version demo](https://gitee.com/lqsong/public/raw/master/admin-element-vue/admin2.png)
+
 
 ## 前序准备
 
@@ -105,7 +108,7 @@ npm run serve
 
 <br/>
 
-启动完成后会自动打开浏览器访问 [http://localhost:8081](http://localhost:8081)， 你看到下面的页面就代表操作成功了。
+启动完成后会，打开浏览器访问 [http://localhost:8081](http://localhost:8081)， 你看到下面的页面就代表操作成功了。
 
 ![](https://gitee.com/lqsong/public/raw/master/admin-element-vue/admin1.png)
 
