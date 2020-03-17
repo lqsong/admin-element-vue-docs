@@ -22,6 +22,8 @@ module.exports = [
             '/guide/senior/esLint',
             '/guide/senior/style-guide',
             '/guide/senior/lazy-loading',
+            '/guide/senior/sso',
+            '/guide/senior/cors',
             '/guide/senior/chart',
             '/guide/senior/icon',
             '/guide/senior/theme',

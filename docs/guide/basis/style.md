@@ -13,12 +13,12 @@
 
 ```css
 /* 编译前 */
-.example {
+.demo {
   color: red;
 }
 
 /* 编译后 */
-.example[_v-f3f3eg9] {
+.demo[_v-f5f5eg9] {
   color: red;
 }
 ```
@@ -69,7 +69,7 @@ admin-element-vue 所有全局样式都在 `@/assets/css` 目录下设置
 将会编译成
 
 ```css
-.a[data-v-f3f3eg9] .b {
+.a[data-v-f5f5eg9] .b {
   /* ... */
 }
 ```

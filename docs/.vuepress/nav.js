@@ -8,7 +8,8 @@ module.exports = [
 			{
                 text: '组件',
 				items: [
-					{text: 'Svg Icon 图标', link: '/feature/component/svg-icon'}
+					{text: 'Svg Icon 图标', link: '/feature/component/svg-icon'},
+					{text: 'ScreenTable', link: '/feature/component/screen-table'}
 				]
             },
 			{

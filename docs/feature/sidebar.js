@@ -5,6 +5,7 @@ module.exports = [
           collapsable: false,
           children:[
             '/feature/component/svg-icon',
+            '/feature/component/screen-table',
           ]
         }  ,
         {
