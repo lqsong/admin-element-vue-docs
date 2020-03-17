@@ -19,7 +19,7 @@ module.exports = [
           title:'进阶',
           collapsable: false,
           children:[
-            '/guide/senior/eslint',
+            '/guide/senior/ESLint',
             '/guide/senior/style-guide',
             '/guide/senior/lazy-loading',
             '/guide/senior/sso',
