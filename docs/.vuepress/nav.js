@@ -8,6 +8,9 @@ module.exports = [
 			{
                 text: '组件',
 				items: [
+					{text: 'tui-editor', link: '/feature/component/tui-editor'},
+					{text: 'CKEditor', link: '/feature/component/CKEditor'},
+					{text: '树形表格', link: '/feature/component/tree-table'},
 					{text: 'Svg Icon 图标', link: '/feature/component/svg-icon'},
 					{text: 'ScreenTable', link: '/feature/component/screen-table'}
 				]

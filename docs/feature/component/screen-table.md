@@ -7,7 +7,7 @@
 
 ## Props 说明
 
-与  `element-ui`的 table 组件 Props 一致，不过只用一部分其他的都未定义，你可以根据自己需求进行调整，[@/components/ScreenTable](https://github.com/lqsong/admin-element-vue/blob/bg-img/src/components/ScreenTable/index.vue)。
+与  `element-ui`的 table 组件 Props 一致，不过只用一部分其他的都未定义，你可以根据自己需求进行调整，[@/components/ScreenTable](https://github.com/lqsong/admin-element-vue/blob/master/src/components/ScreenTable/index.vue)。
 
 详细说明：[element-ui > table 文档](https://element.eleme.cn/#/zh-CN/component/table)
 
@@ -76,4 +76,4 @@
 </screen-table>
 ```
 
-详细示例 [Demo](https://github.com/lqsong/admin-element-vue/blob/bg-img/src/views/Pagesample/List/three.vue)
+详细示例 [Demo](https://github.com/lqsong/admin-element-vue/blob/master/src/views/Pagesample/List/three.vue)

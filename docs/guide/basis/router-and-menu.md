@@ -153,7 +153,7 @@ export const asyncRoutes = [
 ```
 :::
 
-::: warning **注：** 这里有两种书写方式：
+::: warning 注： 这里有两种书写方式：
 
    一、按照以上模块类型划分进行书写；<br>
    二、也可以都在 `@/router/index.js - asyncRoutes` 中直接进行书写,如下：
