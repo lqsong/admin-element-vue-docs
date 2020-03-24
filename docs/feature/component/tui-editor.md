@@ -139,6 +139,4 @@ export default {
 npm uninstall @toast-ui/editor
 ```
 
-2、删除组件文件目录
-
-[TuiEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TuiEditor/)
+2、删除组件文件目录 [TuiEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TuiEditor/)

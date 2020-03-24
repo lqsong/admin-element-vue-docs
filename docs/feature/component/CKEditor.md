@@ -72,7 +72,7 @@ export default {
 
 ## 扩展
 
-> 因为此组件只是简单的基于 `@ckeditor/ckeditor5-build-classic` 创建，比如 `@ckeditor/ckeditor5-build-decoupled-document` 中的 `字体大小`、`字体颜色`、`下划线` 等等, `@ckeditor/ckeditor5-build-classic` 默认是没有的，有两种方法扩展方法:
+> 因为此组件只是简单的基于 `@ckeditor/ckeditor5-build-classic` 创建，比如 `@ckeditor/ckeditor5-build-decoupled-document` 中的 `字体大小`、`字体颜色`、`下划线` 等等, `@ckeditor/ckeditor5-build-classic` 默认是没有的，有两种扩展方法:
 
 1、卸载 `@ckeditor/ckeditor5-build-classic` 安装 `@ckeditor/ckeditor5-build-decoupled-document`：
 
@@ -125,6 +125,4 @@ npm uninstall @ckeditor/ckeditor5-build-classic
 npm uninstall @ckeditor/ckeditor5-vue
 ```
 
-2、删除组件文件目录
-
-[CKEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/CKEditor/)
+2、删除组件文件目录 [CKEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/CKEditor/)
