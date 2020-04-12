@@ -5,6 +5,7 @@ module.exports = [
           collapsable: false,
           children:[
             '/feature/component/tui-editor',
+            '/feature/component/MavonEditor',
             '/feature/component/CKEditor',
             '/feature/component/tree-table',
             '/feature/component/svg-icon',

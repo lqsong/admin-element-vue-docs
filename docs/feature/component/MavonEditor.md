@@ -1,81 +1,21 @@
-# tui-editor
+# MavonEditor
 
-[TuiEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TuiEditor/) 组件基于 `tui-editor` 封装，是一款 Markdown 编辑器；`tui-editor` [官网](https://ui.toast.com/tui-editor/)，[GitHub](https://github.com/nhnent/tui.editor)。
+[MavonEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/MavonEditor/) 组件基于 `mavonEditor` 封装，是一款 Vue Markdown 编辑器；`mavonEditor` [GitHub、文档](https://github.com/hinesboy/mavonEditor)。
 
-## Editor
-
-### Props
+## Props
 
 | 名称     | 类型    | 默认值                      | 说明                                                                           |
 | -------- | ------ | -------------------------- | ------------------------------------------------------------------------------------- |
-| value    | String | " "                        | 编辑器的内容. **如果使用 `v-model`, 不要使用它**.                                      |
-| id       | String | `'tui-editor-' + +new Date() + Math.floor(Math.random() * 1000);` | 编辑器的ID     |
-| options  | Object |  `defaultOptions`          | tui.editor 的配置.                                                                    |
-| height   | String | '300px'                    | 编辑器的高度.                                                                          |
-| mode     | String | 'markdown'                 | 编辑器的模式. (`markdown`or `wysiwyg`)                                                 |
-| language | String | 'zh-CN'                    | 语言(`en_US` or `zh-CN`) ,如果需要其他语言，请自己扩充                   |
-| placeholder | String | '请输入内容'             | 编辑器的 placeholder |
-| imgUpload | [Function, String] | null | 自定义上传图片，1、如果是 String 请填写上传的url地址；2、如果是 Function 自定义上传 function(fileOrBlob,callback)；3、其他(不设置) base64。[文档](#上传图片) |
+| value    | String | " "                        | 编辑器的内容. **如果使用 `v-model`, 不要使用它**.    |
+| height   | String | 自适应                    | 编辑器的高度.              |
+| imgUpload | [Function, String] | null             | 自定义上传图片，1、如果是 String 请填写上传的url地址；2、如果是 Function 自定义上传 function(pos, $file, $vm)；3、其他(不设置) base64。[文档](#上传图片) |
+| 其他Props  | -- | --                     | 见 [官方文档](https://github.com/hinesboy/mavonEditor)   |
 
-```js
-const defaultOptions = {
-  minHeight: '200px',
-  previewStyle: 'vertical',
-  useCommandShortcut: true,
-  useDefaultHTMLSanitizer: true,
-  usageStatistics: false,
-  hideModeSwitch: false,
-  toolbarItems: [
-    'heading',
-    'bold',
-    'italic',
-    'strike',
-    'divider',
-    'hr',
-    'quote',
-    'divider',
-    'ul',
-    'ol',
-    'task',
-    'indent',
-    'outdent',
-    'divider',
-    'table',
-    'image',
-    'link',
-    'divider',
-    'code',
-    'codeblock'
-  ]
-}
-```
-
-### Methods
+## Methods
 
 | 名称           | 说明    | 参数                    | 
 | --------      | ------  | -------------------------- | 
-| setLanguage   | 设置新的语言 | （ name: 语言名, Obj: 内容 ）[样例](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TuiEditor/index.vue#L97)  | 
-| setValue      | 设置编辑器内容 | （ value: 编辑器内容 Markdown 类型 ） | 
-| getValue      | 获取编辑器内容 Markdown 类型 | - | 
-| setHtml      | 设置编辑器html内容 | （ value: 编辑器内容 html 类型 ） | 
-| getHtml      | 获取编辑器html内容  | - | 
-
-
-## Viewer
-
-### Props
-
-| 名称     | 类型    | 默认值                      | 说明                                                                           |
-| -------- | ------ | -------------------------- | ------------------------------------------------------------------------------------- |
-| value    | String | " "                        | 显示的内容. **如果使用 `v-model`, 不要使用它**.                                      |
-| id       | String | `'tui-editor-viewer' + +new Date() + Math.floor(Math.random() * 1000);` | 查看器的ID     |
-
-### Methods
-
-| 名称           | 说明    | 参数                    | 
-| --------      | ------  | -------------------------- | 
-| setValue      | 设置查看器内容 | （ value: 查看器内容 Markdown 类型 ） | 
-| getHtml       | 获取查看器html内容  | - | 
+| change   | 编辑区发生变化的回调事件(render: value 经过markdown解析后的结果) | (String: value , String: render) | 
 
 
 ## 上传图片
@@ -97,16 +37,13 @@ const defaultOptions = {
 ```json
 {
   code: 200, // 状态码
-  data: {
-    url: 'https://gitee.com/lqsong/public/raw/master/common/Alipay.png', // 图片地址
-    name '赞助码' // 图片说明
-  } 
+  data: 'https://gitee.com/lqsong/public/raw/master/common/Alipay.png', // 图片地址
 }
 ```
 前端代码如下：
 
 ```html
-<tui-editor ref="tuieditor" v-model="content" imgUpload="http://ajax.com/upload/img"></tui-editor>
+<mavon-editor ref="mavoneditor" v-model="content" imgUpload="http://ajax.com/upload/img"></mavon-editor>
 ```
 
 ### 自定义上传函数
@@ -120,12 +57,12 @@ const defaultOptions = {
         <div slot="header">
           <span>自定义上传图片</span>
         </div>
-        <tui-editor ref="tuieditor" v-model="content" :imgUpload="imgUpload"></tui-editor>
+        <mavon-editor ref="mavoneditor" v-model="content" :imgUpload="imgUpload"></mavon-editor>
     </el-card>
 
 </template>
 <script>
-import TuiEditor from '@/components/TuiEditor';
+import MavonEditor from '@/components/MavonEditor';
 export default {
   components: {
     TuiEditor
@@ -136,9 +73,9 @@ export default {
     };
   },
   methods: {
-      imgUpload(fileOrBlob, callback) {
+      imgUpload(pos, $file , $vm) {
         var formdata = new FormData();
-        formdata.append('image', fileOrBlob);
+        formdata.append('image', $file);
         // ajax上传
         this.$axios({
             url: '/upload/img',
@@ -147,8 +84,7 @@ export default {
             headers: { 'Content-Type': 'multipart/form-data' }
         }).then(res => {  
             const { data } = res;
-            const { url, name } = data;
-            callback(url, name);
+             $vm.$img2Url(pos, data);
         }).catch(err => {                       
             console.log(err);
         });
@@ -164,65 +100,11 @@ export default {
 ```js
 
 export default {   
-    computed: {
-        editorOptions() {
-            const _this = this;
-            const options = Object.assign({}, defaultOptions, this.options);
-            options.hooks = {};
-            options.initialEditType = _this.mode;
-            options.height = _this.height;
-            options.language = _this.language;
-            options.placeholder = _this.placeholder;            
-            /*
-            // 此代码if判断删除： 
-            if (['string', 'function'].includes(_this.typeofImgUpload)) {
-                options.hooks.addImageBlobHook = _this.$imgUpload;
-            }
-            */
-            // 调整如下：
-            options.hooks.addImageBlobHook = _this.$imgUpload;
-
-
-            return options;
-        },
-        //  typeofImgUpload 可以删除
-        typeofImgUpload() {
-            return typeof this.imgUpload;
-        }
-    },
     methods: {
-       
-        $imgUpload(fileOrBlob, callback){
-            const _this = this;
-            /* 
-            // 此代码 switch 删除
-            switch (_this.typeofImgUpload) {
-               case 'string': // 表示是上传地址
-                    var formdata = new FormData();
-                    formdata.append('image', fileOrBlob);
-                    request({
-                        url: _this.imgUpload,
-                        method: 'post',
-                        data: formdata,
-                        headers: { 'Content-Type': 'multipart/form-data' }
-                    }).then(res => {  
-                        const { data } = res;
-                        const { url, name } = data;
-                        callback(url, name);
-                    }).catch(err => {                       
-                        console.log(err);
-                    });
-                   break;
-               case 'function': // 表示自定义上传
-                   _this.imgUpload(fileOrBlob, callback);
-                   break;           
-               default:
-                   break;
-            }
-            */
-            // 调整如下
+        $imgAdd(pos, $file){
+            const _this = this;           
             var formdata = new FormData();
-            formdata.append('image', fileOrBlob);
+            formdata.append('image', $file);
             this.$axios({
                 url: '上传的后端地址写死到这里，这样就避免掉了每次调用编辑器都要去设置上传了',
                 method: 'post',
@@ -230,12 +112,17 @@ export default {
                 headers: { 'Content-Type': 'multipart/form-data' }
             }).then(res => {  
                 const { data } = res;
-                const { url, name } = data;
-                callback(url, name);
+                // data 就是img 的 url 地址   
+                _this.$refs.mavonEditor.$img2Url(pos, data);
             }).catch(err => {                       
                 console.log(err);
             });
-
+            /**
+             * 自定义 删除刚上传的img记录 
+             * 不让在菜单栏-图片菜单下显示，不要有删除按钮
+             * 因为目前删除 base64 正则报错
+             */
+            _this.$refs.mavonEditor.$refs.toolbar_left.img_file = [[0, null]];           
         }
     }
 };
@@ -243,130 +130,90 @@ export default {
 ```
 :::
 
-## 扩展插件
-
-你可以按照开发需求自定义扩展插件如：`chart` 、`code-syntax-highlight` 、`plugin-color-syntax` 、`table-merged-cell` 、`uml`等。
-
-插件扩展 [官方文档](https://github.com/nhn/tui.editor/blob/master/apps/editor/docs/plugins.md)
-
-以 `code-syntax-highlight` 为例：
-
-### 第一步：安装
-
-```sh
-$ npm install @toast-ui/editor-plugin-code-syntax-highlight
-```
-
-### 第二步：引入
-
-```js
-import Editor from '@toast-ui/editor';
-import codeSyntaxHightlight from '@toast-ui/editor-plugin-code-syntax-highlight';
-import hljs from 'highlight.js';
-```
-
-### 第三步：相关设置
-
-```js
-export default {   
-    methods: {
-        initEditor() {
-            this.editor = new Editor({
-                el: document.getElementById(this.id),
-                /* 添加插件代码 S */
-                plugins: [[codeSyntaxHightlight, { hljs }]],
-                /* 添加插件代码 E */
-                ...this.editorOptions
-            });
-            if (this.value) {
-                this.setValue(this.value);
-            }
-            this.editor.on('change', () => {
-                this.$emit('input', this.getValue());
-            });
-        }
-    }
-};
-```
-
 
 ## Example
 
 ```html
 <template>
-    <div  class="main-conent main-conent-minheight">
+    <div  class="main-conent main-conent-minheight">        
         <el-card shadow="never" class="border-none">
             <div slot="header">
               <span>默认</span>
             </div>
-            <tui-editor ref="tuieditor" v-model="content"></tui-editor>
+            <mavon-editor ref="mavoneditor" v-model="content" @change="change"></mavon-editor>
         </el-card>
 
         <el-card shadow="never" class="border-none margin-t24">
             <div slot="header">
               <span>自定义上传图片</span>
             </div>
-            <tui-editor ref="tuieditor" v-model="content" :imgUpload="imgUpload"></tui-editor>
-        </el-card>
-
-        <el-card shadow="never" class="border-none"  style="margin-top:4px;">
-            <el-button @click="getContent">获取HTML</el-button>
-            <hr>
-            <div v-html="contentHtml"></div>
+            <mavon-editor ref="mavoneditor2" v-model="content" :imgUpload="imgUpload"></mavon-editor>
         </el-card>
 
         <el-card shadow="never" class="border-none margin-t24">
-            <tui-editor-viewer v-model="content"></tui-editor-viewer>
+            <div slot="header">
+              <span>详情</span>
+            </div>
+            <mavon-editor
+              v-model="content"
+              :subfield="false"
+              :toolbars-flag="false"
+              :box-shadow="false"
+              default-open="preview"
+              previewBackground="#FFFFFF"></mavon-editor>
         </el-card>
-        
+
+        <el-card shadow="never" class="border-none margin-t24">
+            <div slot="header">
+              <span>详情 - HTML</span>
+            </div>
+            <div v-html="contentHtml"></div>
+        </el-card>
+
+
     </div>
 </template>
 <script>
-
-import TuiEditor from '@/components/TuiEditor';
-import TuiEditorViewer from '@/components/TuiEditor/Viewer';
+import MavonEditor from '@/components/MavonEditor';
 export default {
-  components: {
-    TuiEditor,
-    TuiEditorViewer
-  },
-  data() {
-    return {
-      content: '# This is Test.',
-      contentHtml: ''
-    };
-  },
-  computed: {
-  },
-  watch: {
-  },
-  methods: {
-      getContent() {
-          this.contentHtml = this.$refs.tuieditor.getHtml();
-      },
-      imgUpload(fileOrBlob, callback) {
-        var formdata = new FormData();
-        formdata.append('image', fileOrBlob);
-        console.log(formdata, fileOrBlob);
-        /* 
-        // ajax上传
-        request({
-            url: '/upload/img',
-            method: 'post',
-            data: formdata,
-            headers: { 'Content-Type': 'multipart/form-data' }
-        }).then(res => {  
-            const { data } = res;
-            const { url, name } = data;
-            callback(url, name);
-        }).catch(err => {                       
-            console.log(err);
-        }); */
-        callback('https://gitee.com/lqsong/public/raw/master/common/Alipay.png','赞助码');
-      }
-  },
-  mounted() {
-  }
+    components: {
+        MavonEditor
+    },
+    data(){
+        return {
+            content: '# This is Test.',
+            contentHtml: ''
+        };
+    },
+    methods: {
+        change(v, html) {
+            console.log(v);
+            this.contentHtml = html;
+        },
+        imgUpload(pos, $file , $vm) {
+           
+            var formdata = new FormData();
+            formdata.append('image', $file);
+            console.log(pos, $file, formdata);
+            /* 
+            // ajax 上传
+            const _this = this;
+            request({
+                url: _this.imgUpload,
+                method: 'post',
+                data: formdata,
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then(res => {  
+                const { data } = res;
+                // data 就是img 的 url 地址   
+                $vm.$img2Url(pos, data);
+            }).catch(err => {                       
+                console.log(err);
+            }); */
+
+            $vm.$img2Url(pos, 'https://gitee.com/lqsong/public/raw/master/common/Alipay.png');
+        }
+    }
 };
 </script>
 ```
@@ -378,7 +225,7 @@ export default {
 1、CMD 运行
 
 ```bash
-npm uninstall @toast-ui/editor
+npm uninstall mavon-editor
 ```
 
-2、删除组件文件目录 [TuiEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TuiEditor/)
+2、删除组件文件目录 [MavonEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/MavonEditor/)
