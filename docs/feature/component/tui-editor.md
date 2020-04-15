@@ -260,7 +260,7 @@ $ npm install @toast-ui/editor-plugin-code-syntax-highlight
 ### 第二步：引入
 
 ```js
-import Editor from '@toast-ui/editor';
+import 'highlight.js/styles/github.css';
 import codeSyntaxHightlight from '@toast-ui/editor-plugin-code-syntax-highlight';
 import hljs from 'highlight.js';
 ```
