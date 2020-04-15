@@ -4,7 +4,16 @@ module.exports = {
     dest: './dist',
     port: '8080',
     head: [
-        ['link', {rel: 'icon', href: '/favicon.ico'}]
+        ['link', {rel: 'icon', href: '/favicon.ico'}],
+        ['script', {type: 'text/javascript', src: 'https://s4.cnzz.com/z_stat.php?id=1278815770&web_id=1278815770'}]/* ,
+        ['script', {type: 'text/javascript'}, `
+            window.onload = function(){
+                var oScript = document.createElement("script");
+                oScript.type = "text/javascript";
+                oScript.url = "https://s4.cnzz.com/z_stat.php?id=1278815770&web_id=1278815770";
+                document.body.parentNode.appendChild(oScript);
+            };
+        `] */
     ],
     markdown: {
         lineNumbers: true
