@@ -1,7 +1,7 @@
 module.exports = {
     title: 'admin-element-vue',
     description: 'Element Plus Vue3.x Admin',
-    dest: './dist',
+    dest: './tsv2',
     base: '/tsv2/',
     port: '8080',
     head: [
