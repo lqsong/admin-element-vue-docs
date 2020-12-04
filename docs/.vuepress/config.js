@@ -1,6 +1,6 @@
 module.exports = {
     title: 'admin-element-vue',
-    description: '基于 VueJs 、Element UI 、TypeScript 、Axios 后台前端解决方案',
+    description: '基于 VueJs 、Element UI 、TypeScript 、Axios ... 后台前端解决方案',
     dest: './dist',
     port: '8080',
     head: [
