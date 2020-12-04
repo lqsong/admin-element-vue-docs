@@ -5,10 +5,10 @@
 ## Layout/Index
 
 ::: tip 对应代码
-[@/layout/Index](https://github.com/lqsong/admin-element-vue/blob/master/src/layout/Index/index.vue)
+[@/layout/Index](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/layout/Index/index.vue)
 :::
 
-采用的是 **Flex 布局**，`admin-element-vue` 中大部分页面都是基于这个 `layout/Index` 的，除了个别页面如：`login` , `404` 等页面没有使用该 `layout/Index`。如果你想在一个项目中有多种不同的`layout` 也是很方便的，只要在一级路由那里选择不同的`layout`组件就行。
+采用的是 **Flex 布局**，`admin-element-vue` <Version /> 中大部分页面都是基于这个 `layout/Index` 的，除了个别页面如：`login` , `404` 等页面没有使用该 `layout/Index`。如果你想在一个项目中有多种不同的`layout` 也是很方便的，只要在一级路由那里选择不同的`layout`组件就行。
 
 ```js
 // 没有用 layout
@@ -70,7 +70,7 @@
 ## app-main
 
 ::: tip 对应代码
-[@/layout/components/AppMain](https://github.com/lqsong/admin-element-vue/blob/master/src/layout/components/AppMain/index.vue)
+[@/layout/components/AppMain](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/layout/components/AppMain/index.vue)
 :::
 
 `app-main` 主要功能是引入了 `<router-view>` ，配合 **路由和菜单->[多级目录（嵌套路由）](/guide/basis/router-and-menu.html#多级目录-嵌套路由)**  使用。

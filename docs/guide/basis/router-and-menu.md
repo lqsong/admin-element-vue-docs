@@ -232,7 +232,7 @@ export const asyncRoutes = [
 前面也介绍了，菜单是通过读取路由并结合权限判断而动态生成的，当然也包括顶部菜单。
 
 ::: tip 代码地址
-[@/layout/Index/LayoutIndexRightTop](https://github.com/lqsong/admin-element-vue/blob/master/src/layout/Index/LayoutIndexRightTop.vue#L10)
+[@/layout/Index/LayoutIndexRightTop](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/layout/Index/LayoutIndexRightTop.vue#L10)
 
 **注意**
 
@@ -247,10 +247,10 @@ export const asyncRoutes = [
 前面也介绍了，菜单是通过读取路由并结合权限判断而动态生成的，当然也包括侧边栏菜单，而且还需要支持路由无限嵌套，所以这里还使用到了递归组件。
 
 ::: tip 代码地址
-[@/layout/components/SidebarMenuItem](https://github.com/lqsong/admin-element-vue/tree/master/src/layout/components/SidebarMenuItem)
+[@/layout/components/SidebarMenuItem](https://github.com/lqsong/admin-element-vue/tree/javascript.v1/src/layout/components/SidebarMenuItem)
 :::
 
-这里同时也改造了 `element-ui` 默认侧边栏不少的样式，所有的 css 都可以在 [@/assets/css/sidebar-menu.scss](https://github.com/lqsong/admin-element-vue/blob/master/src/assets/css/sidebar-menu.scss) 中找到，你也可以根据自己的需求进行修改。
+这里同时也改造了 `element-ui` 默认侧边栏不少的样式，所有的 css 都可以在 [@/assets/css/sidebar-menu.scss](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/assets/css/sidebar-menu.scss) 中找到，你也可以根据自己的需求进行修改。
 
 ::: warning 注意事项
 这里有一个非常需要注意的地方就是，如果开启了 **顶部菜单** , 那 **侧边栏菜单** 会按照路由的正常层级，走第二级开始往下递归；如果没有开启，则走第一级开始往下递归。
@@ -297,7 +297,7 @@ export const asyncRoutes = [
 
 ## 多级目录(嵌套路由)
 
-一、如果你的路由是多级目录，如本项目中那样，有三级路由或更多嵌套的情况下，需要借助于 [@/layout/components/AppMain](https://github.com/lqsong/admin-element-vue/blob/master/src/layout/components/AppMain/index.vue) 用法如下：
+一、如果你的路由是多级目录，如本项目中那样，有三级路由或更多嵌套的情况下，需要借助于 [@/layout/components/AppMain](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/layout/components/AppMain/index.vue) 用法如下：
 
 ```js
 import LayoutIndex from '@/layout/Index';
@@ -394,7 +394,7 @@ export default chartstatisticRouter;
 ![](https://gitee.com/lqsong/public/raw/master/admin-element-vue/breadcrumb-cus.png)
 
 ::: tip 代码地址
-[@/components/Breadcrumb](https://github.com/lqsong/admin-element-vue/blob/master/src/components/Breadcrumb/index.vue)
+[@/components/Breadcrumb](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/Breadcrumb/index.vue)
 :::
 
 **样例：**

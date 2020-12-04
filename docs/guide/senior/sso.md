@@ -1,6 +1,6 @@
 # 单点登录
 
-`admin-element-vue` 项目考虑了单点登录的使用情况， 在 **路由和菜单** > [配置参数](/guide/basis/router-and-menu.html#配置参数) 章节，你会发现有下面几个参数：
+`admin-element-vue` <Version /> 项目考虑了单点登录的使用情况， 在 **路由和菜单** > [配置参数](/guide/basis/router-and-menu.html#配置参数) 章节，你会发现有下面几个参数：
 
 ```javascript
 /**

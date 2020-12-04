@@ -1,7 +1,8 @@
 module.exports = {
     title: 'admin-element-vue',
-    description: 'Element-ui Vue Admin',
-    dest: './dist',
+    description: 'Element-ui Vue2.x Admin',
+    dest: './jsv1',
+    base: '/jsv1/',
     port: '8080',
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}],

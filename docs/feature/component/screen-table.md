@@ -2,12 +2,12 @@
 
 ## 简介
 
-此组件是结合 `Layout/Index` 布局，考虑到部分用户习惯，查看[Demo](http://demo.admin-element-vue.liqingsong.cc/#/pagesample/list/three)调整浏览器高度观察效果,
+此组件是结合 `Layout/Index` 布局，考虑到部分用户习惯，查看[Demo](http://jsv1-demo.admin-element-vue.liqingsong.cc/#/pagesample/list/three)调整浏览器高度观察效果,
 它基于`element-ui`的 table 组件实现，通过`el-table`，并且利用 `vue` 插槽的特性来方便用户自定义。
 
 ## Props 说明
 
-与  `element-ui`的 table 组件 Props 一致，不过只用一部分其他的都未定义，你可以根据自己需求进行调整，[@/components/ScreenTable](https://github.com/lqsong/admin-element-vue/blob/master/src/components/ScreenTable/index.vue)。
+与  `element-ui`的 table 组件 Props 一致，不过只用一部分其他的都未定义，你可以根据自己需求进行调整，[@/components/ScreenTable](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/ScreenTable/index.vue)。
 
 详细说明：[element-ui > table 文档](https://element.eleme.cn/#/zh-CN/component/table)
 
@@ -76,4 +76,4 @@
 </screen-table>
 ```
 
-详细示例 [Demo](https://github.com/lqsong/admin-element-vue/blob/master/src/views/Pagesample/List/three.vue)
+详细示例 [Demo](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/views/Pagesample/List/three.vue)

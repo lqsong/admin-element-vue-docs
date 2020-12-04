@@ -32,7 +32,7 @@
 
 ## 目录结构
 
-admin-element-vue 所有全局样式都在 `@/assets/css` 目录下设置
+`admin-element-vue` <Version /> 所有全局样式都在 `@/assets/css` 目录下设置
 
 ```bash
 ├── css

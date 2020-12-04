@@ -19,7 +19,7 @@ var echarts = require('echarts')
 
 [webpack 中使用 ECharts 文档](http://echarts.baidu.com/tutorial.html#%E5%9C%A8%20webpack%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20ECharts)
 
-[ECharts 按需引入模块文档](https://github.com/ecomfe/echarts/blob/master/index.js)
+[ECharts 按需引入模块文档](https://github.com/ecomfe/echarts/blob/javascript.v1/index.js)
 
 接下来我们就要在 vue 中声明初始化 ECharts 了。因为 ECharts 初始化必须绑定 dom，所以我们只能在 vue 的 mounted 生命周期里进行初始化。
 
@@ -81,7 +81,7 @@ watch: {
 其他操作和参数请参考 [ECharts 官方文档](https://www.echartsjs.com/zh/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts)。
 
 ::: tip
-具体实例可参照 [@/views/Chartstatistic/Echarts/](https://github.com/lqsong/admin-element-vue/tree/master/src/views/Chartstatistic/Echarts) 下 vue 文件
+具体实例可参照 [@/views/Chartstatistic/Echarts/](https://github.com/lqsong/admin-element-vue/tree/javascript.v1/src/views/Chartstatistic/Echarts) 下 vue 文件
 :::
 
 ## 其它

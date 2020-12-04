@@ -2,11 +2,11 @@
 
 [![vue](https://img.shields.io/badge/vue-2.6.10-brightgreen.svg)](https://github.com/vuejs/vue)
 [![element-ui](https://img.shields.io/badge/element--ui-2.13.0-brightgreen.svg)](https://github.com/ElemeFE/element)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/lqsong/admin-element-vue/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/lqsong/admin-element-vue.svg?style=social&label=Stars)](https://github.com/lqsong/admin-element-vue)
 
 
-[admin-element-vue](http://demo.admin-element-vue.liqingsong.cc/) 是一个后台前端解决方案，它基于 [vue](https://github.com/vuejs/vue) 和 [element-ui](https://github.com/ElemeFE/element)实现。它使用了最新的前端技术栈，动态路由，权限验证，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。
+[admin-element-vue <Version />](http://jsv1-demo.admin-element-vue.liqingsong.cc/) 是一个后台前端解决方案，它基于 [Vue2.x](https://github.com/vuejs/vue) 和 [element-ui](https://github.com/ElemeFE/element)实现。它使用了最新的前端技术栈，动态路由，权限验证，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。
 
 
 ## 功能
@@ -38,7 +38,7 @@
   - ECharts 图表
 ```
 
-**[Default version demo](http://demo.admin-element-vue.liqingsong.cc/)**             |  **[BgImg version demo](http://bgimg-demo.admin-element-vue.liqingsong.cc/)**
+**[Default version demo](http://jsv1-demo.admin-element-vue.liqingsong.cc/)**             |  **[BgImg version demo](http://bgimg-demo.admin-element-vue.liqingsong.cc/)**
 :-------------------------:|:-------------------------:
 ![Default version demo](https://gitee.com/lqsong/public/raw/master/admin-element-vue/admin1.png)  |  ![BgImg version demo](https://gitee.com/lqsong/public/raw/master/admin-element-vue/admin2.png)
 
@@ -90,7 +90,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/lqsong/admin-element-vue.git
+git clone -b javascript.v1  https://github.com/lqsong/admin-element-vue.git
 
 # 进入项目目录
 cd admin-element-vue
@@ -129,7 +129,7 @@ npm run serve
 
 ## 捐赠
 
-如果你觉得这个项目帮助到了你，你可以请作者喝咖啡表示鼓励.
+如果你觉得这个项目帮助到了你，请帮助 [![GitHub stars](https://img.shields.io/github/stars/lqsong/admin-element-vue.svg?style=social&label=Stars)](https://github.com/lqsong/admin-element-vue)，你也可以请作者喝咖啡表示鼓励 :coffee:
 
 **ALIPAY**             |  **WECHAT**
 :-------------------------:|:-------------------------:

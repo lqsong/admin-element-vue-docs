@@ -29,13 +29,13 @@
 | expandOnClickNode | Boolean | true                    | 参照  `element-ui`-`el-tree`文档                 |
 
 
-与  `element-ui`的 tree 组件 Props 一致，不过只用一部分其他的都未定义，你可以根据自己需求进行调整，[@/components/TreeTable](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TreeTable/index.vue)。
+与  `element-ui`的 tree 组件 Props 一致，不过只用一部分其他的都未定义，你可以根据自己需求进行调整，[@/components/TreeTable](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/TreeTable/index.vue)。
 
 详细说明：[element-ui > tree 文档](https://element.eleme.cn/#/zh-CN/component/tree)
 
 ## Methods
 
-与  `element-ui`的 tree 组件 Methods 一致，不过只用一部分其他的都未定义，你可以根据自己需求进行调整，[@/components/TreeTable](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TreeTable/index.vue)。
+与  `element-ui`的 tree 组件 Methods 一致，不过只用一部分其他的都未定义，你可以根据自己需求进行调整，[@/components/TreeTable](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/TreeTable/index.vue)。
 
 详细说明：[element-ui > tree 文档](https://element.eleme.cn/#/zh-CN/component/tree)
 
@@ -214,4 +214,4 @@ export default {
 </script>
 ```
 
-详细示例 [Demo](https://github.com/lqsong/admin-element-vue/tree/master/src/views/Component/Tree)
+详细示例 [Demo](https://github.com/lqsong/admin-element-vue/tree/javascript.v1/src/views/Component/Tree)

@@ -1,6 +1,6 @@
 # tui-editor
 
-[TuiEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TuiEditor/) 组件基于 `tui-editor` 封装，是一款 Markdown 编辑器；`tui-editor` [官网](https://ui.toast.com/tui-editor/)，[GitHub](https://github.com/nhnent/tui.editor)。
+[TuiEditor](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/TuiEditor/) 组件基于 `tui-editor` 封装，是一款 Markdown 编辑器；`tui-editor` [官网](https://ui.toast.com/tui-editor/)，[GitHub](https://github.com/nhnent/tui.editor)。
 
 ## Editor
 
@@ -54,7 +54,7 @@ const defaultOptions = {
 
 | 名称           | 说明    | 参数                    | 
 | --------      | ------  | -------------------------- | 
-| setLanguage   | 设置新的语言 | （ name: 语言名, Obj: 内容 ）[样例](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TuiEditor/index.vue#L97)  | 
+| setLanguage   | 设置新的语言 | （ name: 语言名, Obj: 内容 ）[样例](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/TuiEditor/index.vue#L97)  | 
 | setValue      | 设置编辑器内容 | （ value: 编辑器内容 Markdown 类型 ） | 
 | getValue      | 获取编辑器内容 Markdown 类型 | - | 
 | setHtml      | 设置编辑器html内容 | （ value: 编辑器内容 html 类型 ） | 
@@ -247,7 +247,7 @@ export default {
 
 你可以按照开发需求自定义扩展插件如：`chart` 、`code-syntax-highlight` 、`plugin-color-syntax` 、`table-merged-cell` 、`uml`等。
 
-插件扩展 [官方文档](https://github.com/nhn/tui.editor/blob/master/apps/editor/docs/plugins.md)
+插件扩展 [官方文档](https://github.com/nhn/tui.editor/blob/javascript.v1/apps/editor/docs/plugins.md)
 
 以 `code-syntax-highlight` 为例：
 
@@ -381,4 +381,4 @@ export default {
 npm uninstall @toast-ui/editor
 ```
 
-2、删除组件文件目录 [TuiEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/TuiEditor/)
+2、删除组件文件目录 [TuiEditor](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/TuiEditor/)

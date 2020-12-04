@@ -2,7 +2,7 @@
 
 全局 Svg Icon 图标组件。
 
-默认在 [@/components/SvgIcon](https://github.com/lqsong/admin-element-vue/blob/master/src/components/SvgIcon/index.js#L12) 中注册到全局中，可以在项目中任意地方使用。所以图标均可在 [@/assets/icons/svg](https://github.com/lqsong/admin-element-vue/tree/master/src/assets/icons/svg)。可自行添加或者删除图标，所以图标都会被自动导入，无需手动操作。
+默认在 [@/components/SvgIcon](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/SvgIcon/index.js#L12) 中注册到全局中，可以在项目中任意地方使用。所以图标均可在 [@/assets/icons/svg](https://github.com/lqsong/admin-element-vue/tree/javascript.v1/src/assets/icons/svg)。可自行添加或者删除图标，所以图标都会被自动导入，无需手动操作。
 
 ## 使用方式
 

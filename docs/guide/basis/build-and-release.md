@@ -11,7 +11,7 @@ npm run build
 
 构建打包成功之后，会在根目录生成 `dist` 文件夹，里面就是构建打包好的文件，通常是 `***.js` 、`***.css`、`index.html` 等静态文件。
 
-如果需要自定义构建，比如指定 `dist` 目录等，则需要通过 [vue.config.js](https://github.com/lqsong/admin-element-vue/blob/master/vue.config.default.js)的 `outputDir` 参数进行配置。
+如果需要自定义构建，比如指定 `dist` 目录等，则需要通过 [vue.config.js](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/vue.config.default.js)的 `outputDir` 参数进行配置。
 
 ## 发布
 

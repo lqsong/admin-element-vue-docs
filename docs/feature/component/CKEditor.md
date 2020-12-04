@@ -1,7 +1,7 @@
 # CKEditor
 
 
-[CKEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/CKEditor/) 组件基于 `CKEditor 5` 封装，是一款 富文本编辑器；`CKEditor` [官网](https://ckeditor.com/)。
+[CKEditor](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/CKEditor/) 组件基于 `CKEditor 5` 封装，是一款 富文本编辑器；`CKEditor` [官网](https://ckeditor.com/)。
 
 
 ## Props
@@ -81,15 +81,15 @@ npm uninstall @ckeditor/ckeditor5-build-classic
 npm install @ckeditor/ckeditor5-build-decoupled-document
 ```
 
-然后修改组件 [CKEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/CKEditor/index.vue) `@ckeditor/ckeditor5-build-classic` 替换成 `@ckeditor/ckeditor5-build-decoupled-document`，就ok了。
+然后修改组件 [CKEditor](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/CKEditor/index.vue) `@ckeditor/ckeditor5-build-classic` 替换成 `@ckeditor/ckeditor5-build-decoupled-document`，就ok了。
 
-2、安装对应的 `字体大小`、`字体颜色`、`下划线` 等插件；然后在组件 [CKEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/CKEditor/index.vue)修改集成插件即可，如:
+2、安装对应的 `字体大小`、`字体颜色`、`下划线` 等插件；然后在组件 [CKEditor](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/CKEditor/index.vue)修改集成插件即可，如:
 
 ```bash
 npm install --save @ckeditor/ckeditor5-font
 ```
 
-[CKEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/CKEditor/index.vue) 组件中引入：
+[CKEditor](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/CKEditor/index.vue) 组件中引入：
 
 ```js
 import Font from '@ckeditor/ckeditor5-font/src/font';
@@ -125,4 +125,4 @@ npm uninstall @ckeditor/ckeditor5-build-classic
 npm uninstall @ckeditor/ckeditor5-vue
 ```
 
-2、删除组件文件目录 [CKEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/CKEditor/)
+2、删除组件文件目录 [CKEditor](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/CKEditor/)

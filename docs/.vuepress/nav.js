@@ -28,10 +28,31 @@ module.exports = [
         text: '捐赠', link: '/donate/'
     },
     {
+        text: '生态',
+		items: [
+            {text: 'admin-antd-react', link: 'http://admin-antd-react.liqingsong.cc'},
+            {text: 'admin-antd-vue', link: 'http://admin-antd-vue.liqingsong.cc'},
+        ]
+    },
+    {
+        text: 'js.v1',
+        items: [
+            {
+                text: '其他版本',
+                items: [
+                    {text: 'ts.v2', link: 'http://admin-element-vue.liqingsong.cc/tsv2/'},
+                ] 
+            }            
+        ]
+    },
+    {
+        text: '预览', link: 'http://jsv1-demo.admin-element-vue.liqingsong.cc'
+    },
+    {
         text: 'GitHub',
 		items: [
-            {text: 'Github', link: 'https://github.com/lqsong/admin-element-vue'},
-            {text: 'Gitee', link: 'https://gitee.com/lqsong/admin-element-vue'},
+            {text: 'Github', link: 'https://github.com/lqsong/admin-element-vue/tree/javascript.v1'},
+            {text: 'Gitee', link: 'https://gitee.com/lqsong/admin-element-vue/tree/javascript.v1'},
         ]
     }
 ]

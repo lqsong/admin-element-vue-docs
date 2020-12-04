@@ -4,7 +4,7 @@
 
 ## 系统配置
 
-`admin-element-vue` 内置了一个系统配置文件 `@/settings.js`。
+`admin-element-vue` <Version /> 内置了一个系统配置文件 `@/settings.js`。
 
 ```javascript
 /**
@@ -95,7 +95,7 @@ import '@/mock';
 
 ## vue-cli 配置
 
-`admin-element-vue` 基于 `vue-cli`来进行构建，所以有个 vue-cli 配置文件 `/vue.config.js`，但是为了防止在开发或生产环境中，不同开发人员或环境的不同导致配置冲突，所以本项目添加了一个默认的文件 `/vue.config.default.js`，请复制并重名为 `/vue.config.js`。
+`admin-element-vue` <Version /> 基于 `vue-cli`来进行构建，所以有个 vue-cli 配置文件 `/vue.config.js`，但是为了防止在开发或生产环境中，不同开发人员或环境的不同导致配置冲突，所以本项目添加了一个默认的文件 `/vue.config.default.js`，请复制并重名为 `/vue.config.js`。
 
 ```bash
 ├── public                     # 静态资源
@@ -111,7 +111,7 @@ import '@/mock';
 :::
 
 ## 环境变量
-`admin-element-vue` 基于 `vue-cli`来进行构建，所以所有的环境变量配置都是基于`vue-cli`来实现和控制的。
+`admin-element-vue` <Version /> 基于 `vue-cli`来进行构建，所以所有的环境变量配置都是基于`vue-cli`来实现和控制的。
 
 [官方文档](https://cli.vuejs.org/zh/guide/mode-and-env.html)
 

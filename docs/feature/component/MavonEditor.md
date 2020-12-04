@@ -1,6 +1,6 @@
 # MavonEditor
 
-[MavonEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/MavonEditor/) 组件基于 `mavonEditor` 封装，是一款 Vue Markdown 编辑器；`mavonEditor` [GitHub、文档](https://github.com/hinesboy/mavonEditor)。
+[MavonEditor](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/MavonEditor/) 组件基于 `mavonEditor` 封装，是一款 Vue Markdown 编辑器；`mavonEditor` [GitHub、文档](https://github.com/hinesboy/mavonEditor)。
 
 ## Props
 
@@ -228,4 +228,4 @@ export default {
 npm uninstall mavon-editor
 ```
 
-2、删除组件文件目录 [MavonEditor](https://github.com/lqsong/admin-element-vue/blob/master/src/components/MavonEditor/)
+2、删除组件文件目录 [MavonEditor](https://github.com/lqsong/admin-element-vue/blob/javascript.v1/src/components/MavonEditor/)

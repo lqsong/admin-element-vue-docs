@@ -161,6 +161,6 @@ export default {
 
 ## 新增 api ajax请求
 
-最后在 [@/service](https://github.com/lqsong/admin-element-vue/tree/master/src/service) 文件夹下创建本模块对应的 api ajax 请求 服务。
+最后在 [@/service](https://github.com/lqsong/admin-element-vue/tree/javascript.v1/src/service) 文件夹下创建本模块对应的 api ajax 请求 服务。
 
 
