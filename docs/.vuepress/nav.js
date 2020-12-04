@@ -9,11 +9,21 @@ module.exports = [
                 text: '组件',
 				items: [
 					{text: 'tui-editor', link: '/feature/component/tui-editor'},
-					{text: 'MavonEditor', link: '/feature/component/MavonEditor'},
 					{text: 'CKEditor', link: '/feature/component/CKEditor'},
-					{text: '树形表格', link: '/feature/component/tree-table'},
-					{text: 'Svg Icon 图标', link: '/feature/component/svg-icon'},
-					{text: 'ScreenTable', link: '/feature/component/screen-table'}
+                    {text: 'IconSvg', link: '/feature/component/icon-svg'},
+                    {text: 'IconFont', link: '/feature/component/icon-font'}
+				]
+            },
+            {
+                text: 'Composables Api',
+				items: [
+					{text: 'useEcharts', link: '/feature/composables/echarts'}
+				]
+            },
+            {
+                text: 'Directives',
+				items: [
+					{text: 'v-permission', link: '/feature/directives/permission'}
 				]
             },
 			{
@@ -26,6 +36,27 @@ module.exports = [
     },
     {
         text: '捐赠', link: '/donate/'
+    },
+    {
+        text: '生态',
+		items: [
+            {text: 'admin-antd-react', link: 'http://admin-antd-react.liqingsong.cc'},
+            {text: 'admin-antd-vue', link: 'http://admin-antd-vue.liqingsong.cc'},
+        ]
+    },
+    {
+        text: 'ts.v2',
+        items: [
+            {
+                text: '其他版本',
+                items: [
+                    {text: 'js.v1', link: 'http://admin-element-vue.liqingsong.cc/jsv1/'},
+                ] 
+            }            
+        ]
+    },
+    {
+        text: '预览', link: 'http://tsv2-demo.admin-element-vue.liqingsong.cc'
     },
     {
         text: 'GitHub',

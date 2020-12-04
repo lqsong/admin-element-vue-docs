@@ -3,8 +3,11 @@
 本项目提供了 svg 压缩处理优化功能。基于 [svgo](https://github.com/svg/svgo)实现。
 
 ```bash
+yarn svgo
+# or
 npm run svgo
 ```
+> 你可以根据自身需求修改压缩配置文件 `@/assets/iconsvg/svgo.yml` 对应的参数。
 
 我们很多网上下载或者 `Sketch` 导出的 svg 会有很多冗余无用的信息，大大的增加了 svg 的尺寸，我们可以使用 `svgo` 对它进行优化。比如以下是一个 svg
 
@@ -36,4 +39,4 @@ Done in 7 ms!
 </svg>
 ```
 
-更多详细的配置 可以在 `/scr/components/SvgIcon/svgo.yml` 中进行配置。
+更多详细的配置 可以在 `@/assets/iconsvg/svgo.yml` 中进行配置。

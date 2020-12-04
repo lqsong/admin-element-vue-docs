@@ -5,13 +5,25 @@ module.exports = [
           collapsable: false,
           children:[
             '/feature/component/tui-editor',
-            '/feature/component/MavonEditor',
             '/feature/component/CKEditor',
-            '/feature/component/tree-table',
-            '/feature/component/svg-icon',
-            '/feature/component/screen-table',
+            '/feature/component/icon-svg',
+            '/feature/component/icon-font',
           ]
-        }  ,
+        },
+        {
+          title:'Composables Api',
+          collapsable: false,
+          children:[
+            '/feature/composables/echarts',
+          ]
+        },
+        {
+          title:'Directives',
+          collapsable: false,
+          children:[
+            '/feature/directives/permission',
+          ]
+        },
         {
           title:'Script',
           collapsable: false,

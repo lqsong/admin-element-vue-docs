@@ -1,8 +1,27 @@
 # 权限验证
 
-项目中权限的实现方式是：通过获取当前用户的权限去比对路由表，生成当前用户具有的权限，可访问的路由表，通过 `router.addRoutes` 动态挂载到 `router` 上。
+## 权限实现方式
 
-## 使用方法
+本项目`IndexLayout`中权限的实现方式分以下内容：
+
+### 菜单的生成
+
+通过获取当前用户的权限去比对路由配置的`roles`参数，判断当前用户具有的权限，可访问的路由表，动态生成菜单。
+
+### 路由页面访问权限
+
+`IndexLayout` 中通过 [@/components/Permission](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/components/Permission) 组件判断权限进行展示。
+
+### 页面按钮权限
+
+- 1、页面中的按钮可以通过[@/components/Permission](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/components/Permission) 组件验证权限是否展示。
+
+- 2、页面中的按钮可以通过[@/directives/permission](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/directives/permission) 自定义指令验证权限是否展示。
+
+使用样例：[代码](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/views/roles/all)，[样例](http://tsv2-demo.admin-element-vue.liqingsong.cc/#/roles/all)
+
+
+## 路由`roles`使用方法
 
 ### 一、角色类型法：
 
@@ -11,29 +30,23 @@
 ```js
 [
   {
+    title: 'empty',
     path: '/login',
-    meta: {
-      title: '登录',
-      roles: ['admin','test']
-    },
-    component: () => import('@/views/Login')    
+    roles: ['admin','test'],
+    component: ()=> import('@/views/user/Login/index.vue')   
   },
 
   {
+    title: 'empty',
     path: '/404',
-    meta: {
-      title: 'Not Found',
-      roles: ['test']
-    },
-    component: () => import('@/views/404')    
+    roles: ['test'],
+    component: ()=> import('@/views/404/index.vue') 
   },
   {
-    path: '/',
-    meta: {
-      title: '首页',
-      roles: ['admin']
-    },
-    component: () => import('@/views/home')
+    title: 'empty',
+    path: '/home',
+    roles: ['admin'],
+    component: ()=> import('@/views/home/index.vue')    
   }
 ]
 ```
@@ -47,29 +60,23 @@
 ```js
 [
   {
+    title: '',
     path: '/login',
-    meta: {
-      title: '登录',
-      roles: ['login']
-    },
-    component: () => import('@/views/Login')    
+    roles: ['login'],
+    component: ()=> import('@/views/user/Login/index.vue')  
   },
 
   {
+    title: '',
     path: '/404',
-    meta: {
-      title: 'Not Found',
-      roles: ['404']
-    },
-    component: () => import('@/views/404')    
+    roles: ['404'],
+    component: ()=> import('@/views/404/index.vue')   
   },
   {
-    path: '/',
-    meta: {
-      title: '首页',
-      roles: ['home']
-    },
-    component: () => import('@/views/home')
+    title: '',
+    path: '/home',
+    roles: ['home'],
+    component: ()=> import('@/views/home/index.vue')   
   }
 ]
 ```
