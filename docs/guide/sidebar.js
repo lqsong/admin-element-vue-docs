@@ -26,6 +26,7 @@ module.exports = [
             '/guide/senior/chart',
             '/guide/senior/theme',
             '/guide/senior/error',
+            '/guide/senior/electron',
           ]
         }
 ]
