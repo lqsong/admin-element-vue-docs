@@ -1,5 +1,5 @@
 <template>
-    <Badge text="ts.v2"/>
+    <Badge text="vite.ts"/>
 </template>
 <script>
 export default {

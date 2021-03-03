@@ -21,7 +21,7 @@
 
 ## 请求
 
-项目里所有的请求都会走 `@/utils/request.ts` 里面创建的的 `Axios` 实例，它统一做了错误处理，[完整代码](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/utils/request.ts)。
+项目里所有的请求都会走 `@/utils/request.ts` 里面创建的的 `Axios` 实例，它统一做了错误处理，[完整代码](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/utils/request.ts)。
 
 你可以在`errorHandler` 中根据自己的实际业务统一针对不同的状态码或者根据自定义 code 来做错误处理。如：
 

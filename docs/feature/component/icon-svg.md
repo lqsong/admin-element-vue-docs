@@ -2,9 +2,9 @@
 
 全局 Svg Icon 图标组件。
 
-[@/components/IconSvg](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/components/IconSvg) 可以在项目中任意地方使用。图标均可在 [@/assets/iconsvg](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/assets/iconsvg)目录下自行添加或者删除，所有图标都会被自动导入，无需手动操作。
+[@/components/IconSvg](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/components/IconSvg) 可以在项目中任意地方使用。图标均可在 [@/assets/iconsvg](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/assets/iconsvg)目录下自行添加或者删除，所有图标都会被自动导入，无需手动操作。
 
-[在线DOME](http://tsv2-demo.admin-element-vue.liqingsong.cc/#/component/icon/svg)
+[在线DOME](http://vitets-demo.admin-element-vue.liqingsong.cc/#/component/icon/svg)
 
 ## 使用方法
 

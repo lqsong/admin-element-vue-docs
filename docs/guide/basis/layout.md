@@ -5,7 +5,7 @@
 ## IndexLayout
 
 ::: tip 对应代码
-[@/layouts/IndexLayout](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/layouts/IndexLayout)
+[@/layouts/IndexLayout](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/layouts/IndexLayout)
 :::
 
 IndexLayout 采用的是 **Flex 布局**，`@/layouts/IndexLayout` 目录内容如下：
@@ -46,7 +46,7 @@ const IndexLayoutRoutes: RoutesDataItem[] = [
 export default IndexLayoutRoutes;
 ```
 
-这样你访问 `http://localhost:8000/#/home` 就可以看到一个使用了 `IndexLayout` 的页面了。
+这样你访问 `http://localhost:3000/#/home` 就可以看到一个使用了 `IndexLayout` 的页面了。
 
 :::tip 重点：
 `IndexLayout/routes.ts` 路由配置对应参数说明请查看 [路由和菜单](/guide/basis/router-and-menu.md)
@@ -56,18 +56,18 @@ export default IndexLayoutRoutes;
 
 ### 有顶部导航
 
-![有顶部导航](https://gitee.com/lqsong/public/raw/master/admin-element-vue-typescript/home.png)
+![有顶部导航](https://gitee.com/lqsong/public/raw/master/admin-element-vue-vite-ts/home.png)
 
 ### 无顶部导航
 
-![无顶部导航](https://gitee.com/lqsong/public/raw/master/admin-element-vue-typescript/home2.png)
+![无顶部导航](https://gitee.com/lqsong/public/raw/master/admin-element-vue-vite-ts/home2.png)
 
 ## UserLayout
 
 > 不是所有页面都会用到 `IndexLayout` , 比如**登录** 、 **注册** 等页面，所以本项目增加了 `UserLayout`。
 
 ::: tip 对应代码
-[@/layouts/UserLayout](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/layouts/UserLayout)
+[@/layouts/UserLayout](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/layouts/UserLayout)
 :::
 
 `UserLayout` 与 `IndexLayout` 目录内容基本一致，`@/layouts/UserLayout` 目录内容如下：
@@ -112,7 +112,7 @@ export default UserLayoutRoutes;
 
 ```
 
-这样你访问 `http://localhost:8000/#/user/login` 、 `http://localhost:8000/#/user/register` 就可以看到一个使用了 `UserLayout` 的登录、注册页面了。
+这样你访问 `http://localhost:3000/#/user/login` 、 `http://localhost:3000/#/user/register` 就可以看到一个使用了 `UserLayout` 的登录、注册页面了。
 
 :::tip 重点：
 与 `IndexLayout` 一致, `UserLayout/routes.ts` 路由配置对应参数说明请查看 [路由和菜单](/guide/basis/router-and-menu.md)
@@ -204,7 +204,7 @@ const router = createRouter({
   scrollBehavior(/* to, from, savedPosition */) {
     return { top: 0 }
   },
-  history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: routes as any,
 });
 

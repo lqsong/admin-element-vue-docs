@@ -5,7 +5,7 @@ Mock 数据是前端开发过程中必不可少的一环，是分离前后端开
 ## 约定式 Mock 文件
 
 :::tip 
-`admin-element-vue-typescript` 基于 [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/) 实现了本地 MOCK 服务，并集成了[mockjs](https://github.com/nuysoft/Mock)。
+`admin-element-vue-vite-ts` 基于 [`vite`](https://github.com/vitejs/vite) 实现了本地 MOCK 服务，并集成了[mockjs](https://github.com/nuysoft/Mock)。
 :::
 
 `/mock` 文件夹下所有文件为 mock 文件。
@@ -32,13 +32,13 @@ module.exports = {
   // 'method url': (req, res) => {}   
 
   'get /404': (req, res) => {
-      res.status(404).send({
+      res.send({
         timestamp: 1513932643431,
         status: 404,
         error: 'Not Found',
         message: 'No message available',
         path: '/404',
-      });
+      }, 404);
   }
 };
 ```
@@ -55,7 +55,7 @@ module.exports = {
 
 #### res 参数
 
-`'method url': (req, res) => {}` 中 `res` 常用方法：`res.send({返回值})` 、 `res.status(状态码)`。
+`'method url': (req, res) => {}` 中 `res` 常用方法：`res.send({返回值}, 状态码默认200)` 。
 
 ### 样例代码
 
@@ -63,11 +63,11 @@ module.exports = {
 
 ```js
 const mockjs= require('mockjs');
-const { VUE_APP_APIHOST } = process.env;
+const { VITE_APP_APIHOST } = process.env;
 const ajaxHeadersTokenKey = 'x-token';
 const mock = {};
 
-mock[`GET ${VUE_APP_APIHOST}/user/info`] = (req, res) => {
+mock[`GET ${VITE_APP_APIHOST}/user/info`] = (req, res) => {
     const headers = req.headers;
     if (headers[ajaxHeadersTokenKey] === 'admin') {
         res.send({
@@ -109,14 +109,14 @@ mock[`GET ${VUE_APP_APIHOST}/user/info`] = (req, res) => {
 
 };
 
-mock[`GET ${VUE_APP_APIHOST || ''}/user/message`] = (req, res) => {
+mock[`GET ${VITE_APP_APIHOST || ''}/user/message`] = (req, res) => {
     res.send({
       code: 0,
       data: mockjs.mock('@integer(0,99)'),
     });
 };
   
-mock[`POST ${VUE_APP_APIHOST || ''}/user/login`] = (req, res) => {
+mock[`POST ${VITE_APP_APIHOST || ''}/user/login`] = (req, res) => {
     const { password, username } = req.body;
     const send = { code: 0, data: {}, msg: '' };
     if (username === 'admin' && password === '123456') {
@@ -139,7 +139,7 @@ mock[`POST ${VUE_APP_APIHOST || ''}/user/login`] = (req, res) => {
     res.send(send);
 };
   
-mock[`POST ${VUE_APP_APIHOST || ''}/user/register`] = (req, res) => {
+mock[`POST ${VITE_APP_APIHOST || ''}/user/register`] = (req, res) => {
     res.send({
       code: 0,
       data: '',

@@ -13,18 +13,18 @@ npm run build
 
 构建打包成功之后，会在根目录生成 `dist` 文件夹，里面就是构建打包好的文件，通常是 `***.js` 、`***.css`、`index.html` 等静态文件。
 
-如果需要自定义构建，比如指定 `dist` 目录等，则需要通过 `/vue.config.js` 的 `outputDir` 参数进行配置。
+如果需要自定义构建，比如指定 `dist` 目录等，则需要通过 `/vite.config.ts` 进行配置，详情请参考[vite官方文档](https://cn.vitejs.dev/guide/build.html)。
 
 ## 发布
 
 对于发布来讲，只需要将最终生成的静态文件，也就是通常情况下 `dist` 文件夹的静态文件发布到你的 cdn 或者静态服务器即可，需要注意的是其中的 `index.html` 通常会是你后台服务的入口页面，在确定了 js 和 css 的静态之后可能需要改变页面的引入路径。
 
 ::: tip
-部署时可能会发现资源路径不对 ,只需修改 `/vue.config.js` 文件资源路径即可。
+部署时可能会发现资源路径不对 ,只需修改 `/vite.config.ts` 文件资源路径即可。
 :::
 
 ```js
-publicPath: './' //请根据自己路径来配置更改
+base: './' //请根据自己路径来配置更改
 ```
 
 ## 前端路由与服务端的结合
@@ -41,13 +41,13 @@ const router = createRouter({
   scrollBehavior(/* to, from, savedPosition */) {
     return { top: 0 }
   },
-  //history: createWebHashHistory(process.env.BASE_URL),
-  history: createWebHistory(process.env.BASE_URL),
+  //history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: routes as any,
 });
 ```
 
-如果你使用的是静态站点，那么使用 `browserHistory` 可能会无法访问你的应用，因为假设你访问 `http://localhost:8000/home`，那么其实你的静态服务器并没有能够映射的文件，而使用 `hashHistory` 则不会有这个问题，因为它的页面路径是以 `#` 开始的，所有访问都在前端完成，如：`http://localhost:8000/#/home/`。
+如果你使用的是静态站点，那么使用 `browserHistory` 可能会无法访问你的应用，因为假设你访问 `http://localhost:3000/home`，那么其实你的静态服务器并没有能够映射的文件，而使用 `hashHistory` 则不会有这个问题，因为它的页面路径是以 `#` 开始的，所有访问都在前端完成，如：`http://localhost:3000/#/home/`。
 
 不过如果你有对应的后台服务器，那么我们推荐采用 `browserHistory`，只需要在服务端做一个映射，比如：
 

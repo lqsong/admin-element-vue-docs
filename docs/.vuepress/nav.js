@@ -48,19 +48,19 @@ module.exports = [
         ]
     },
     {
-        text: 'ts.v2',
+        text: 'vite.ts',
         items: [
             {
                 text: '其他版本',
                 items: [
+                    {text: 'ts.v2', link: 'http://admin-element-vue.liqingsong.cc/tsv2/'},
                     {text: 'js.v1', link: 'http://admin-element-vue.liqingsong.cc/jsv1/'},
-                    {text: 'vite.ts', link: 'http://admin-element-vue.liqingsong.cc/vitets/'},
                 ] 
             }            
         ]
     },
     {
-        text: '预览', link: 'http://tsv2-demo.admin-element-vue.liqingsong.cc'
+        text: '预览', link: 'http://vitets-demo.admin-element-vue.liqingsong.cc'
     },
     {
         text: 'GitHub',

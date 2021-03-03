@@ -134,11 +134,11 @@ const IndexLayoutRoutes: RoutesDataItem[] = [
 本项目设计了一个路由入口配置文件 `@/config/routes.ts`，然后分别把路由拆分到了不同的`@/layouts`中去配置，这样做的原因：一是在入口文件方便集中处理重新格式化；二是模块化更规范。
 
 ::: tip 对应代码
-[@/config/routes.ts](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/config/routes.ts)
+[@/config/routes.ts](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/config/routes.ts)
 
-[@/layouts/IndexLayout/routes.ts](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/layouts/IndexLayout/routes.ts)
+[@/layouts/IndexLayout/routes.ts](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/layouts/IndexLayout/routes.ts)
 
-[@/layouts/UserLayout/routes.ts](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/layouts/UserLayout/routes.ts)
+[@/layouts/UserLayout/routes.ts](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/layouts/UserLayout/routes.ts)
 :::
 
 
@@ -153,7 +153,7 @@ const IndexLayoutRoutes: RoutesDataItem[] = [
 前面也介绍了，菜单是通过读取路由并结合权限判断而动态生成的，当然也包括顶部菜单。
 
 ::: tip 代码地址
-[@/layouts/IndexLayout/components/RightTop.vue](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/layouts/IndexLayout/components/RightTop.vue)
+[@/layouts/IndexLayout/components/RightTop.vue](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/layouts/IndexLayout/components/RightTop.vue)
 
 **注意**
 
@@ -168,7 +168,7 @@ const IndexLayoutRoutes: RoutesDataItem[] = [
 前面也介绍了，菜单是通过读取路由并结合权限判断而动态生成的，当然也包括侧边栏菜单，而且还需要支持路由无限嵌套，所以这里还使用到了递归组件。
 
 ::: tip 代码地址
-[@/layouts/IndexLayout/components/SiderMenuItem.vue](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/layouts/IndexLayout/components/SiderMenuItem.vue)
+[@/layouts/IndexLayout/components/SiderMenuItem.vue](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/layouts/IndexLayout/components/SiderMenuItem.vue)
 :::
 
 ::: warning 注意事项
@@ -269,9 +269,9 @@ export default IndexLayoutRoutes;
 ![](https://gitee.com/lqsong/public/raw/master/admin-element-vue/breadcrumb-cus.png)
 
 ::: tip 代码地址
-[@/layouts/IndexLayout](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/layouts/IndexLayout/index.vue)
+[@/layouts/IndexLayout](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/layouts/IndexLayout/index.vue)
 
-[@/components/BreadCrumbs](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/components/BreadCrumbs/)
+[@/components/BreadCrumbs](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/components/BreadCrumbs/)
 :::
 
 **样例：**

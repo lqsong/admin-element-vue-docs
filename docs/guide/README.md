@@ -5,7 +5,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/lqsong/admin-element-vue.svg?style=social&label=Stars)](https://github.com/lqsong/admin-element-vue)
 
 
-[admin-element-vue-typescript](http://tsv2-demo.admin-element-vue.liqingsong.cc/) 是一个后台前端解决方案，它基于[Webpack](https://github.com/webpack/webpack) 、[Vue3.x](https://github.com/vuejs/vue-next) 、[Element Plus](https://github.com/element-plus/element-plus) 实现。它使用了最新的前端技术栈、动态路由、权限验证、国际化、Mock 数据等，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。
+[admin-element-vue-vite-ts](http://vitets-demo.admin-element-vue.liqingsong.cc/) 是一个后台前端解决方案，它基于[Vite](https://github.com/vitejs/vite) 、[Vue3.x](https://github.com/vuejs/vue-next) 、[Element Plus](https://github.com/element-plus/element-plus) 实现。它使用了最新的前端技术栈、动态路由、权限验证、国际化、Mock 数据等，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。
 
 
 ## 功能
@@ -50,10 +50,10 @@
   - 权限验证
 ```
 
-| **[http://tsv2-demo.admin-element-vue.liqingsong.cc](http://tsv2-demo.admin-element-vue.liqingsong.cc/)**  |
+| **[http://vitets-demo.admin-element-vue.liqingsong.cc](http://vitets-demo.admin-element-vue.liqingsong.cc/)**  |
 :-------------------------:
-| ![Home](https://gitee.com/lqsong/public/raw/master/admin-element-vue-typescript/home.png)  |
-| ![Home](https://gitee.com/lqsong/public/raw/master/admin-element-vue-typescript/home2.png)  |
+| ![Home](https://gitee.com/lqsong/public/raw/master/admin-element-vue-vite-ts/home.png)  |
+| ![Home](https://gitee.com/lqsong/public/raw/master/admin-element-vue-vite-ts/home2.png)  |
 
 
 
@@ -70,8 +70,7 @@
 ```bash
 ├── mock                       # Mock文件目录
 ├── public                     # 静态资源
-│   ├── favicon.ico            # favicon图标
-│   └── index.html             # html模板
+│   └── favicon.ico            # favicon图标
 ├── src                        # 源代码
 │   ├── assets                 # 静态资源
 │   │   ├── css                # 项目公用 CSS 样式
@@ -121,24 +120,26 @@
 │   ├── main.ts                # 入口文件 加载组件 初始化等
 │   └── shims-vue.d.ts         # Vue TypeScript 配置
 ├── tests                      # 测试目录
-├── .browserslistrc            # 项目的浏览器配置
 ├── .env.development           # 开发环境变量配置
 ├── .env.production            # 生产环境变量配置
+├── .eslintignore              # eslint 忽略配置
 ├── .eslintrc.js               # eslint 配置项
 ├── .gitignore                 # Git忽略文件配置
-├── babel.config.js            # babel-loader 配置
+├── .prettierignore            # prettier 忽略配置
+├── index.html                 # html模板
 ├── jest.config.js             # jest config
 ├── package.json               # 项目信息
+├── prettier.config.js         # prettier 配置
 ├── README.md                  # readme
 ├── tsconfig.json              # TypeScript 配置
-└── vue.config.js              # vue-cli 配置 
+└── vite.config.ts             # vite 配置 
 ```
 
 ## 安装
 
 ```bash
 # 克隆项目
-git clone -b typescript.v2  https://github.com/lqsong/admin-element-vue.git
+git clone -b vite.ts  https://github.com/lqsong/admin-element-vue.git
 
 # 进入项目目录
 cd admin-element-vue
@@ -152,9 +153,9 @@ yarn
 npm install
 
 # 本地开发 启动项目
-yarn serve
+yarn dev
 # or
-npm run serve
+npm run dev
 ```
 
 > 推荐使用 yarn , **[yarn安装与常用命令](http://liqingsong.cc/article/detail/9)** 。
@@ -162,9 +163,9 @@ npm run serve
 
 <br/>
 
-启动完成后会，打开浏览器访问 [http://localhost:8000](http://localhost:8000)， 你看到下面的页面就代表操作成功了。
+启动完成后会，打开浏览器访问 [http://localhost:3000](http://localhost:3000)， 你看到下面的页面就代表操作成功了。
 
-![Home](https://gitee.com/lqsong/public/raw/master/admin-element-vue-typescript/home.png)
+![Home](https://gitee.com/lqsong/public/raw/master/admin-element-vue-vite-ts/home.png)
 
 接下来你可以修改代码进行业务开发了，本项目内建了常见的页面模板、模拟数据、全局路由等等各种实用的功能来辅助开发，你可以继续阅读和探索左侧的其它文档。
 
@@ -175,7 +176,7 @@ npm run serve
 
 有任何修改和建议都可以该项目 pr 和 issue
 
-[admin-element-vue-typescript](https://github.com/lqsong/admin-element-vue) 还在持续迭代中，逐步沉淀和总结出更多功能和相应的实现代码，总结中后台产品模板/组件/业务场景的最佳实践。本项目也十分期待你的参与和[反馈](https://github.com/lqsong/admin-element-vue/issues)。
+[admin-element-vue-vite-ts](https://github.com/lqsong/admin-element-vue/tree/vite.ts) 还在持续迭代中，逐步沉淀和总结出更多功能和相应的实现代码，总结中后台产品模板/组件/业务场景的最佳实践。本项目也十分期待你的参与和[反馈](https://github.com/lqsong/admin-element-vue/issues)。
 
 ## 捐赠
 

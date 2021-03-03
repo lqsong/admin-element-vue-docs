@@ -4,7 +4,7 @@
 
 ## 站点配置
 
-`admin-element-vue-typescript` 内置了一个站点配置文件 `@/config/settings.ts`。
+`admin-element-vue-vite-ts` 内置了一个站点配置文件 `@/config/settings.ts`。
 
 ```ts
 export interface SettingsType {
@@ -64,7 +64,7 @@ export default settings;
 
 ## 路由入口配置文件
 
-`admin-element-vue-typescript` 独立出了一个路由入口配置文件 `@/config/routes.ts`，其目的主要是：统一引入`@/layouts`下不同`layout`的路由，集中处理重新格式化路由。
+`admin-element-vue-vite-ts` 独立出了一个路由入口配置文件 `@/config/routes.ts`，其目的主要是：统一引入`@/layouts`下不同`layout`的路由，集中处理重新格式化路由。
 
 目前 `@/config/routes.ts` 的内容为：
 
@@ -80,7 +80,7 @@ import IndexLayout from '@/layouts/IndexLayout/index.vue';
 import UserLayoutRoutes from '@/layouts/UserLayout/routes';
 import UserLayout from '@/layouts/UserLayout/index.vue';
 
-const routes: RoutesDataItem[] = [
+const routes: Array<RoutesDataItem> = [
   {
     title: 'empty',
     path: '/',
@@ -94,7 +94,7 @@ const routes: RoutesDataItem[] = [
         children: IndexLayoutRoutes
       },
     ]
-  },  
+  },
   {
     title: 'empty',
     path: '/user',
@@ -110,13 +110,13 @@ const routes: RoutesDataItem[] = [
 ]
 
 const router = createRouter({
-  scrollBehavior(/* to, from, savedPosition */) {
-    return { top: 0 }
-  },
-  history: createWebHashHistory(process.env.BASE_URL),
-  routes: routes as any,
-});
-
+    scrollBehavior(/* to, from, savedPosition */) {
+      return { top: 0 }
+    },
+    history: createWebHashHistory(import.meta.env.BASE_URL),
+    routes: routes as any,
+  });
+  
 export default router;
 ```
 
@@ -126,7 +126,7 @@ export default router;
 
 ## Vuex Store 数据模型入口配置文件
 
-`admin-element-vue-typescript` 集成了 `Vuex`，配置文件 `@/config/store.ts` 实现了自动导入功能，并制定了 `StoreModule规则`。
+`admin-element-vue-vite-ts` 集成了 `Vuex`，配置文件 `@/config/store.ts` 实现了自动导入功能，并制定了 `StoreModule规则`。
 
 ::: tip 说明：
 详细文档请查看：[StoreModule](/guide/basis/store-module.md)
@@ -135,7 +135,7 @@ export default router;
 
 ## 国际化入口配置文件
 
-`admin-element-vue-typescript` 包含了国际化功能，并实现了自动导入功能，主要归功于国际化入口配置文件 `@/config/i18n.ts`。
+`admin-element-vue-vite-ts` 包含了国际化功能，并实现了自动导入功能，主要归功于国际化入口配置文件 `@/config/i18n.ts`。
 
 目前 `@/config/i18n.ts` 的内容为：
 
@@ -192,16 +192,16 @@ export default i18n;
 
 
 
-## vue-cli 配置
+## vite 配置
 
-`admin-element-vue-typescript` 基于 `vue-cli`来进行构建，所以有个 vue-cli 配置文件 `/vue.config.js`。
+`admin-element-vue-vite-ts` 基于 `vite`来进行构建，所以有个 vite 配置文件 `/vite.config.ts`。
 
-[官方文档](https://cli.vuejs.org/zh/config/)
+[官方文档](https://cn.vitejs.dev/config/)
 
 
 ## 环境变量
-`admin-element-vue-typescript` 基于 `vue-cli`来进行构建，所以有环境变量配置文件 `/.env.development`、`/.env.production`。
+`admin-element-vue-vite-ts` 基于 `vite`来进行构建，所以有环境变量配置文件 `/.env.development`、`/.env.production`。
 
-[官方文档](https://cli.vuejs.org/zh/guide/mode-and-env.html)
+[官方文档](https://cn.vitejs.dev/guide/env-and-mode.html)
 
 

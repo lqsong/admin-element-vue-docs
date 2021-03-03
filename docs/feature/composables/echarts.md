@@ -1,6 +1,6 @@
 # useEcharts
 
-[useEcharts](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/composables/useEcharts.ts) Composables Api 基于 `Echarts` 封装, [官网](https://echarts.apache.org)。
+[useEcharts](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/composables/useEcharts.ts) Composables Api 基于 `Echarts` 封装, [官网](https://echarts.apache.org)。
 
 ## Props
 
@@ -12,13 +12,13 @@
 
 ## Example
 
-[在线链接](http://tsv2-demo.admin-element-vue.liqingsong.cc/#/home/workplace)
+[在线链接](http://vitets-demo.admin-element-vue.liqingsong.cc/#/home/workplace)
 
 在线代码
 
-[@/views/home/components/WorksChartCard](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/views/home/components/WorksChartCard/index.vue)
+[@/views/home/components/WorksChartCard](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/views/home/components/WorksChartCard/index.vue)
 
-[@/views/home/components/TopicsChartCard](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/views/home/components/TopicsChartCard/index.vue)
+[@/views/home/components/TopicsChartCard](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/views/home/components/TopicsChartCard/index.vue)
 
-[@/views/home/components/LinksChartCard](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/views/home/components/LinksChartCard/index.vue)
+[@/views/home/components/LinksChartCard](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/views/home/components/LinksChartCard/index.vue)
 

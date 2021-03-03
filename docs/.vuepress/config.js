@@ -1,8 +1,8 @@
 module.exports = {
     title: 'admin-element-vue',
-    description: 'Webpack Element Plus Vue3.x Admin',
-    dest: './tsv2',
-    base: '/tsv2/',
+    description: 'Vite Element Plus Vue3.x Admin',
+    dest: './vitets',
+    base: '/vitets/',
     port: '8080',
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}],

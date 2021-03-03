@@ -1,14 +1,14 @@
 # v-permission
 
-[v-permission](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/directives/permission/) 自定义指令，用于验证当前用户权限。
+[v-permission](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/directives/permission/) 自定义指令，用于验证当前用户权限。
 
 ## Example
 
-[在线链接](http://tsv2-demo.admin-element-vue.liqingsong.cc/#/roles/all)
+[在线链接](http://vitets-demo.admin-element-vue.liqingsong.cc/#/roles/all)
 
 在线代码
 
-[@/views/roles/all/index.vue](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/views/roles/all/index.vue)
+[@/views/roles/all/index.vue](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/views/roles/all/index.vue)
 
 ## Props
 

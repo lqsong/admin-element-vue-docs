@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-/tsv2
+/vitets
 
 package-lock.json
 yarn.lock

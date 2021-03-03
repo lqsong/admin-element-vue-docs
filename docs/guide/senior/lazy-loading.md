@@ -4,7 +4,7 @@
 
 结合 Vue3.x 的 `defineAsyncComponent` 样例如下：
 
-[在线代码](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/views/home/index.vue);
+[在线代码](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/views/home/index.vue);
 
 ```vue
 <template>

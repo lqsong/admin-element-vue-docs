@@ -1,10 +1,10 @@
 # IconFont
 
-组件位置：[@/components/IconFont](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/components/IconFont)。
+组件位置：[@/components/IconFont](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/components/IconFont)。
 
 创建原因：方便统一管理使用 `iconfont.cn` 上 js 资源图标 。
 
-[在线DOME](http://tsv2-demo.admin-element-vue.liqingsong.cc/#/component/icon/font)
+[在线DOME](http://vitets-demo.admin-element-vue.liqingsong.cc/#/component/icon/font)
 
 ## 使用方法
 

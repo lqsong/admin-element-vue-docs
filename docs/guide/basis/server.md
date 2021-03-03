@@ -2,7 +2,7 @@
 
 ## 前端请求流程
 
-在 `admin-element-vue-typescript` 中，一个完整的前端 UI 交互到服务端处理流程是这样的：
+在 `admin-element-vue-vite-ts` 中，一个完整的前端 UI 交互到服务端处理流程是这样的：
 
 1.  UI 组件交互操作；
 2.  调用统一管理的 `store.ts` StoreModel；(此步可以省略，可以直接进行下步)
@@ -14,12 +14,12 @@
 
 ##  request.ts
 
-`@/utils/request.ts` 是基于 [Axios](https://github.com/axios/axios) 的封装，便于统一处理 POST，GET 等请求参数，请求头，以及错误提示信息等。具体可以参看 [@/utils/request.ts](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/utils/request.ts)。
+`@/utils/request.ts` 是基于 [Axios](https://github.com/axios/axios) 的封装，便于统一处理 POST，GET 等请求参数，请求头，以及错误提示信息等。具体可以参看 [@/utils/request.ts](https://github.com/lqsong/admin-element-vue/blob/vite.ts/src/utils/request.ts)。
 它封装了全局 `request拦截器`、`response拦截器`、`统一的错误处理`、`统一做了超时处理`、`baseURL设置等`。
 
 ## 一个表单提交例子：
 
-[代码](https://github.com/lqsong/admin-element-vue/tree/typescript.v2/src/views/pagesample/form/basic)
+[代码](https://github.com/lqsong/admin-element-vue/tree/vite.ts/src/views/pagesample/form/basic)
 
 
 ```ts
@@ -238,7 +238,7 @@ export default defineComponent({
         const formRef = ref<typeof ElForm>();
         // 重置
         const resetFields = () => {
-            formRef.value?.resetFields();
+            formRef.value && formRef.value.resetFields();
         }
         // 提交loading
         const submitLoading = ref<boolean>(false);
@@ -246,7 +246,7 @@ export default defineComponent({
         const handleSubmit = async () => {
             submitLoading.value = true;
             try {
-                const valid: boolean | undefined =  await formRef.value?.validate();
+                const valid: boolean =  formRef.value ? await formRef.value.validate() : false;
                 if(valid === true) {
                     const res: boolean = await store.dispatch('FormBasic/create',modelRef);                
                     if (res === true) {

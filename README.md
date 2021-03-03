@@ -1,2 +1,2 @@
-# admin-element-vue-typescript-docs
-admin-element-vue-typescript docs
+# admin-element-vue-vite-ts-docs
+admin-element-vue-vite-ts docs
