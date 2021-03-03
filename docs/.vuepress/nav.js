@@ -44,6 +44,7 @@ module.exports = [
                 text: '其他版本',
                 items: [
                     {text: 'ts.v2', link: 'http://admin-element-vue.liqingsong.cc/tsv2/'},
+                    {text: 'vite.ts', link: 'http://admin-element-vue.liqingsong.cc/vitets/'},
                 ] 
             }            
         ]

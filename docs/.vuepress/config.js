@@ -1,6 +1,6 @@
 module.exports = {
     title: 'admin-element-vue',
-    description: 'Element-ui Vue2.x Admin',
+    description: 'Webpack Element-ui Vue2.x Admin',
     dest: './jsv1',
     base: '/jsv1/',
     port: '8080',
