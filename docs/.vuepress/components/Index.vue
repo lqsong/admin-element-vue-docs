@@ -1,5 +1,6 @@
 <template>
     <div class="index">
+        <h3 >基于Webpack构建</h3>
         <div class="index-con">
             <a class="index-con-li" href="/tsv2/">
                 <h2>TypeScript <Badge text="v2"/></h2>
@@ -10,6 +11,14 @@
                 <p>Element-ui Vue2.x Admin</p>
             </a>
         </div>
+        <h3 >基于Vite构建</h3>
+        <div class="index-con">
+            <a class="index-con-li" href="/vitets/">
+                <h2>TypeScript </h2>
+                <p>Element Plus Vue3.x Admin</p>
+            </a>
+            
+        </div>
     </div>
 </template>
 <script>
@@ -19,6 +28,7 @@ export default {
 </script>
 <style lang="stylus" scoped >
 .index
+  padding-top 20px
   .index-con
     border-top 1px solid $borderColor
     padding 1.2rem 0
