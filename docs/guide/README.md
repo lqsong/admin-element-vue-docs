@@ -5,7 +5,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/lqsong/admin-element-vue.svg?style=social&label=Stars)](https://github.com/lqsong/admin-element-vue)
 
 
-[admin-element-vue-typescript](http://tsv2-demo.admin-element-vue.liqingsong.cc/) 是一个后台前端解决方案，它基于 [Vue3.x](https://github.com/vuejs/vue-next) 、[Element Plus](https://github.com/element-plus/element-plus) 实现。它使用了最新的前端技术栈、动态路由、权限验证、国际化、Mock 数据等，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。
+[admin-element-vue-typescript](http://tsv2-demo.admin-element-vue.liqingsong.cc/) 是一个后台前端解决方案，它基于[Webpack](https://github.com/webpack/webpack) 、[Vue3.x](https://github.com/vuejs/vue-next) 、[Element Plus](https://github.com/element-plus/element-plus) 实现。它使用了最新的前端技术栈、动态路由、权限验证、国际化、Mock 数据等，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。
 
 
 ## 功能

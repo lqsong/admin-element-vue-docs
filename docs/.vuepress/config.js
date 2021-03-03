@@ -1,6 +1,6 @@
 module.exports = {
     title: 'admin-element-vue',
-    description: 'Element Plus Vue3.x Admin',
+    description: 'Webpack Element Plus Vue3.x Admin',
     dest: './tsv2',
     base: '/tsv2/',
     port: '8080',

@@ -54,6 +54,7 @@ module.exports = [
                 text: '其他版本',
                 items: [
                     {text: 'js.v1', link: 'http://admin-element-vue.liqingsong.cc/jsv1/'},
+                    {text: 'vite.ts', link: 'http://admin-element-vue.liqingsong.cc/vitets/'},
                 ] 
             }            
         ]
