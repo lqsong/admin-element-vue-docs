@@ -59,7 +59,7 @@
 
 ## 前序准备
 
-在开始之前，推荐先学习  [Vue3.x](https://github.com/vuejs/vue-next) 、 [Vuex4.x](https://github.com/vuejs/vuex)、 [Vue-router4.x](https://github.com/vuejs/vue-router-next)、 [ES2015+](http://es6.ruanyifeng.com/) 、 [TypeScript](https://github.com/Microsoft/TypeScript) 、 [Element Plus](https://github.com/element-plus/element-plus) , 了解 [Vue-cli](https://github.com/vuejs/vue-cli) 、 [Axios](https://github.com/axios/axios) 、[Mock.js](https://github.com/nuysoft/Mock) ，提前了解和学习这些知识会对使用本项目有很大的帮助，因为本项目技术栈都是基于它们。并且你需要在本地安装 [node 版本10.13 或以上](http://nodejs.org/) 和 [git](https://git-scm.com/)。
+在开始之前，推荐先学习  [Vue3.x](https://github.com/vuejs/vue-next) 、 [Vuex4.x](https://github.com/vuejs/vuex)、 [Vue-router4.x](https://github.com/vuejs/vue-router-next)、 [ES2015+](http://es6.ruanyifeng.com/) 、 [TypeScript](https://github.com/Microsoft/TypeScript) 、 [Element Plus](https://github.com/element-plus/element-plus) , 了解 [Vite](https://github.com/vitejs/vite) 、 [Axios](https://github.com/axios/axios) 、[Mock.js](https://github.com/nuysoft/Mock) ，提前了解和学习这些知识会对使用本项目有很大的帮助，因为本项目技术栈都是基于它们。并且你需要在本地安装 [node 版本10.13 或以上](http://nodejs.org/) 和 [git](https://git-scm.com/)。
 
 **本项目不支持低版本浏览器(如 ie)**
 
