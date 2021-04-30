@@ -98,7 +98,7 @@ const defaultOptions = {
 {
   code: 200, // 状态码
   data: {
-    url: 'https://gitee.com/lqsong/public/raw/master/common/Alipay.png', // 图片地址
+    url: 'http://uploads.liqingsong.cc/20210430/f62d2436-8d92-407d-977f-35f1e4b891fc.png', // 图片地址
     name '赞助码' // 图片说明
   } 
 }
@@ -362,7 +362,7 @@ export default {
         }).catch(err => {                       
             console.log(err);
         }); */
-        callback('https://gitee.com/lqsong/public/raw/master/common/Alipay.png','赞助码');
+        callback('http://uploads.liqingsong.cc/20210430/f62d2436-8d92-407d-977f-35f1e4b891fc.png','赞助码');
       }
   },
   mounted() {

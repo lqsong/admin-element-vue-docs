@@ -37,7 +37,7 @@
 ```json
 {
   code: 200, // 状态码
-  data: 'https://gitee.com/lqsong/public/raw/master/common/Alipay.png', // 图片地址
+  data: 'http://uploads.liqingsong.cc/20210430/f62d2436-8d92-407d-977f-35f1e4b891fc.png', // 图片地址
 }
 ```
 前端代码如下：
@@ -211,7 +211,7 @@ export default {
                 console.log(err);
             }); */
 
-            $vm.$img2Url(pos, 'https://gitee.com/lqsong/public/raw/master/common/Alipay.png');
+            $vm.$img2Url(pos, 'http://uploads.liqingsong.cc/20210430/f62d2436-8d92-407d-977f-35f1e4b891fc.png');
         }
     }
 };
