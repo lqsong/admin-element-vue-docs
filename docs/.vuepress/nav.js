@@ -43,7 +43,7 @@ module.exports = [
             {text: 'admin-antd-vue', link: 'http://admin-antd-vue.liqingsong.cc'},
             {text: 'admin-antd-react', link: 'http://admin-antd-react.liqingsong.cc'},
             {text: 'electron-admin-element-vue', link: '/guide/senior/electron'},
-            {text: 'electron-admin-antd-vue', link: 'http://admin-antd-vue.liqingsong.cc/guide/senior/electron.html'},
+            {text: 'electron-admin-antd-vue', link: 'http://admin-antd-vue.liqingsong.cc/webpackts/guide/senior/electron.html'},
             {text: 'electron-admin-antd-react', link: 'http://admin-antd-react.liqingsong.cc/guide/senior/electron.html'},
         ]
     },
