@@ -10,9 +10,9 @@
 
 ```ts
 /**
- * 自定义面包屑类型
+ * 面包屑类型
  */
-export interface BreadcrumbType {
+ export interface BreadcrumbType {
   // 标题，路由在菜单、浏览器title 或 面包屑中展示的文字，目前可以使用locales
   title: string;
   // 路由地址或外链
@@ -20,56 +20,69 @@ export interface BreadcrumbType {
 }
 
 /**
- * 路由类型
+ * tab导航存储规则类型
  */
-interface RoutesDataItemCore {
-  // 菜单中是否隐藏
-  hidden?: boolean;
-  // 图标的名称，显示在菜单标题前
-  icon?: string;
-  // 权限控制，页面角色(您可以设置多个角色)
-  roles?: string[];
-  // 标题，路由在菜单、浏览器title 或 面包屑中展示的文字，目前可以使用locales
-  title: string;
-  // 路由地址或外链
-  path: string;
-  // 子集
-  children?: RoutesDataItem[];
+export type TabNavType = 'path' | 'querypath';
+
+import 'vue-router'
+declare module 'vue-router' {
   /**
-   * 面包屑自定义内容：
-   *     1、默认不配置按照路由自动读取；
-   *     2、设置为 false , 按照路由自动读取并不读当前自己；
-   *     3、配置对应的面包屑格式如下：
+   * 自定义补充扩展 - 路由 - 类型字段
    */
-  breadcrumb?: BreadcrumbType[] | false;
-  /**
-   * 左侧菜单选中，如果设置路径，侧栏将突出显示你设置的路径对应的侧栏导航
-   *   1、（默认 route.path），此参数是为了满足特殊页面特殊需求，
-   *   2、如：详情页等选中侧栏导航或在模块A下面的页面，想选模块B为导航选中状态
-   */
-  selectLeftMenu?: string;
-  /**
-   * 所属顶级菜单,当顶级菜单存在时，用于选中顶部菜单，与侧栏菜单切换
-   *   1、三级路由此参数的作用是选中顶级菜单
-   *   2、二级路由此参数的作用是所属某个顶级菜单的下面，两个层级的必须同时填写一致，如果path设置的是外链，此参数必填
-   *   3、(默认不设置 path.split('/')[0])，此参数是为了满足特殊页面特殊需求
-   */
-  belongTopMenu?: string;
+  interface _RouteRecordBase {
+      // 菜单中是否隐藏
+      hidden?: boolean;
+      // 图标的名称，显示在菜单标题前
+      icon?: string;
+      // 权限控制，页面角色(您可以设置多个角色)
+      roles?: string[];
+      // 标题，路由在菜单、浏览器title 或 面包屑中展示的文字，目前可以使用locales
+      title: string;
+      /**
+       * 面包屑自定义内容：
+       *     1、默认不配置按照路由自动读取；
+       *     2、设置为 false , 按照路由自动读取并不读当前自己；
+       *     3、配置对应的面包屑格式如下：
+       */
+      breadcrumb?: BreadcrumbType[] | false;
+      /**
+       * 设置tab导航存储规则类型
+       *    1、默认不配置按照path(route.path)规则
+       *    2、querypath：path + query (route.path+route.query) 规则
+       */
+      tabNavType?: TabNavType ;
+      /**
+       * 设置该字段，则在关闭当前tab页时，作为关闭前的钩子函数
+       * @param close 关闭回调函数
+       */
+      tabNavCloseBefore?: (close: ()=>void)=> void;
+      /**
+        * 左侧菜单选中，如果设置路径，侧栏将突出显示你设置的路径对应的侧栏导航
+        *   1、（默认 route.path），此参数是为了满足特殊页面特殊需求，
+        *   2、如：详情页等选中侧栏导航或在模块A下面的页面，想选模块B为导航选中状态
+        */
+      selectLeftMenu?: string;
+      /**
+        * 所属顶级菜单,当顶级菜单存在时，用于选中顶部菜单，与侧栏菜单切换
+        *   1、三级路由此参数的作用是选中顶级菜单
+        *   2、二级路由此参数的作用是所属某个顶级菜单的下面，两个层级的必须同时填写一致，如果path设置的是外链，此参数必填
+        *   3、(默认不设置 path.split('/')[0])，此参数是为了满足特殊页面特殊需求
+        */
+      belongTopMenu?: string;
+  }
 }
-interface RoutesDataItemComponent extends RoutesDataItemCore {
-  // 跳转地址
-  redirect?: RouteLocationRaw | ((to: RouteLocation) => RouteLocationRaw);
-  // 组件页面
-  component: Component | Promise<Component>;
-}
-interface RoutesDataItemRedirect extends RoutesDataItemCore{
-  // 跳转地址
-  redirect: RouteLocationRaw | ((to: RouteLocation) => RouteLocationRaw);
-  // 组件页面
-  component?: Component | Promise<Component>;
-}
-export type RoutesDataItem = RoutesDataItemComponent | RoutesDataItemRedirect;
+import { RouteRecordRaw } from 'vue-router';
+
+
+/**
+ * 自定义重命名 - 路由类型
+ */
+export type RoutesDataItem = RouteRecordRaw;
 ```
+
+:::tip 重要：
+本项目路由配置，在原有的`vue-router`配置基础上，扩展了以上配置参数。
+:::
 
 <br/>
 
@@ -115,6 +128,11 @@ const IndexLayoutRoutes: RoutesDataItem[] = [
             path: 'http://liqingsong.cc',
           },
         ],
+        tabNavCloseBefore: (close: () => void): void=> {
+          if(window.confirm('确认关闭吗')) {
+            close();
+          }
+        }
       },
       {
         icon: 'detail',
@@ -297,6 +315,37 @@ export default IndexLayoutRoutes;
   ],
 }
 ```
+
+
+## TabNav
+
+
+本项目 `IndexLayout` 中封装了一个`TabNav`，它是通过监听路由变化动态生成的。它可以通过配置项控制存储规则和关闭回调。你可以结合自己的业务需求增改这些自定义属性。参照 [配置参数](#配置参数) 中的 `tabNavType` 和 `tabNavCloseBefore` 参数
+
+
+**样例：**
+```js
+{
+  title: 'index-layout.menu.pages.detail.basic',
+  path: 'basic',
+  component: ()=> import('@/views/pagesample/detail/basic/index.vue'),
+  tabNavType: 'querypath',
+  tabNavCloseBefore: (close: () => void): void=> {
+    if(window.confirm('确认关闭吗')) {
+      close();
+    }
+  }
+},
+```
+::: tip 
+`tabNavType`：有两个参数值`path`与`querypath`；默认`path`,比如列表页、发布页；`querypath`一般用于详情页、编辑页，因为需要打开多个Tab。
+
+`tabNavCloseBefore`：关闭TabNav前置，比如关闭前行你需要提示用户是否关闭，一般会在编辑页或者比较重要的页面关闭提示。
+:::
+
+::: warning  注意
+`vue-router` 支持 `动态路径参数(params)`，本项目`IndexLayout`框架中`面包屑`和`TabNav`不支持`动态路径参数`，所以本项目请使用`query`传参。
+:::
 
 
 
