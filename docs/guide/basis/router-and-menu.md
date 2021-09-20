@@ -84,7 +84,6 @@ export type RoutesDataItem = RouteRecordRaw;
 本项目路由配置，在原有的`vue-router`配置基础上，扩展了以上配置参数。
 :::
 
-<br/>
 
 **示例：**
 
