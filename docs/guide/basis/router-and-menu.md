@@ -321,6 +321,7 @@ export default IndexLayoutRoutes;
 
 本项目 `IndexLayout` 中封装了一个`TabNav`，它是通过监听路由变化动态生成的。它可以通过配置项控制存储规则和关闭回调。你可以结合自己的业务需求增改这些自定义属性。参照 [配置参数](#配置参数) 中的 `tabNavType` 和 `tabNavCloseBefore` 参数
 
+![](https://gitee.com/lqsong/public/raw/master/admin-element-vue/tabnav.png)
 
 **样例：**
 ```js
