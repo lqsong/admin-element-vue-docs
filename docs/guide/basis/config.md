@@ -7,6 +7,8 @@
 `admin-element-vue-vite-ts` 内置了一个站点配置文件 `@/config/settings.ts`。
 
 ```ts
+import { RoutesDataItem } from "@/utils/routes";
+
 export interface SettingsType {
   /**
    * 站点名称
@@ -22,6 +24,17 @@ export interface SettingsType {
    * 头部固定开启
    */
   headFixed: boolean;
+
+  /**
+   * tab菜单开启
+   */
+  tabNavEnable: boolean;
+
+  /**
+   * 站点首页路由
+   */
+  homeRouteItem: RoutesDataItem;
+  
 
   /**
    * 站点本地存储Token 的 Key值
@@ -49,6 +62,13 @@ const settings: SettingsType = {
   siteTitle: 'ADMIN-ELEMENT-VUE',
   topNavEnable: true,
   headFixed: true,
+  tabNavEnable: true,
+  homeRouteItem: {
+      icon: 'control',
+      title: 'index-layout.menu.home.workplace',
+      path: '/home/workplace',
+      component: ()=> import('@/views/home/index.vue')
+  },
   siteTokenKey: 'admin_element_vue_token',
   ajaxHeadersTokenKey: 'x-token',
   ajaxResponseNoVerifyUrl: [
@@ -71,6 +91,7 @@ export default settings;
 ```ts
 import { createRouter, createWebHashHistory } from 'vue-router';
 import { RoutesDataItem } from "@/utils/routes";
+import settings from "@/config/settings";
 
 import SecurityLayout from '@/layouts/SecurityLayout.vue';
 
@@ -80,7 +101,7 @@ import IndexLayout from '@/layouts/IndexLayout/index.vue';
 import UserLayoutRoutes from '@/layouts/UserLayout/routes';
 import UserLayout from '@/layouts/UserLayout/index.vue';
 
-const routes: Array<RoutesDataItem> = [
+const routes: RoutesDataItem[] = [
   {
     title: 'empty',
     path: '/',
@@ -89,12 +110,17 @@ const routes: Array<RoutesDataItem> = [
       {
         title: 'empty',
         path: '/',
-        redirect: '/home/workplace',
+        redirect: settings.homeRouteItem.path,
         component: IndexLayout,
         children: IndexLayoutRoutes
       },
+      {
+        title: 'empty',
+        path: '/refresh',
+        component: () => import('@/views/refresh/index.vue'),
+      },
     ]
-  },
+  },  
   {
     title: 'empty',
     path: '/user',
@@ -110,13 +136,13 @@ const routes: Array<RoutesDataItem> = [
 ]
 
 const router = createRouter({
-    scrollBehavior(/* to, from, savedPosition */) {
-      return { top: 0 }
-    },
-    history: createWebHashHistory(import.meta.env.BASE_URL),
-    routes: routes as any,
-  });
-  
+  scrollBehavior(/* to, from, savedPosition */) {
+    return { top: 0 }
+  },
+  history: createWebHashHistory(process.env.BASE_URL),
+  routes: routes,
+});
+
 export default router;
 ```
 
