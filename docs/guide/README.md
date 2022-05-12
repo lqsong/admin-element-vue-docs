@@ -20,10 +20,11 @@
 
 - 全局功能
   - 国际化多语言
-  - 动态顶级菜单（支持设置是否启用）
   - 动态侧边栏（支持多级路由嵌套）
   - 动态面包屑（支持自定义配置）
-  - 动态TabNav（支持关闭前置、刷新当前页面、是否启用）
+  - 动态顶级菜单（IndexLayout支持设置是否启用）
+  - 菜单导航模式vertical/horizontal切换（UniversalLayout支持）
+  - 主题dark/light切换（UniversalLayout支持）
   - Svg Sprite 图标
   - Mock 数据
 
@@ -52,10 +53,18 @@
   - 权限验证
 ```
 
-| **[http://vitets-demo.admin-element-vue.liqingsong.cc](http://vitets-demo.admin-element-vue.liqingsong.cc/)**  |
+| **[基于IndexLayout](http://vitets-demo.admin-element-vue.liqingsong.cc/)**    |
 :-------------------------:
-| ![Home](https://gitee.com/lqsong/public/raw/master/admin-element-vue-vite-ts/home.png)  |
-| ![Home](https://gitee.com/lqsong/public/raw/master/admin-element-vue-vite-ts/home2.png)  |
+| ![Home](http://admin-element-vue.liqingsong.cc/tsv2/images/indexlayout/home1.png)  |
+| ![Home](http://admin-element-vue.liqingsong.cc/tsv2/images/indexlayout/home2.png)  |
+
+
+| **[基于UniversalLayout](http://vitets-universal-demo.admin-element-vue.liqingsong.cc/)**  |
+:-------------------------:
+| ![Home](http://admin-element-vue.liqingsong.cc/tsv2/images/universallayout/home1.png)  |
+| ![Home](http://admin-element-vue.liqingsong.cc/tsv2/images/universallayout/home2.png)  |
+| ![Home](http://admin-element-vue.liqingsong.cc/tsv2/images/universallayout/home3.png)  |
+| ![Home](http://admin-element-vue.liqingsong.cc/tsv2/images/universallayout/home4.png)  |
 
 
 
@@ -87,7 +96,13 @@
 │   │   └── store.ts           # Vuex Store 配置入口
 │   ├── directives             # 全局 自定义指令
 │   ├── layout                 # 项目 layout
-│   │   ├── IndexLayout        # 项目默认主 Layout
+│   │   ├── IndexLayout        # 项目默认自定义主 Layout
+│   │   │   ├── components     # IndexLayout 公共组件
+│   │   │   ├── composables    # IndexLayout 公共组合式 API
+│   │   │   ├── locales        # IndexLayout 国际化，主要为路由菜单
+│   │   │   ├── index.vue      # IndexLayout 模板入口
+│   │   │   └── routes.ts      # 使用 IndexLayout 的页面路由配置
+│   │   ├── UniversalLayout    # 项目通用Layout，可以与IndexLayout互相代替
 │   │   │   ├── components     # IndexLayout 公共组件
 │   │   │   ├── composables    # IndexLayout 公共组合式 API
 │   │   │   ├── locales        # IndexLayout 国际化，主要为路由菜单
@@ -167,7 +182,7 @@ npm run dev
 
 启动完成后会，打开浏览器访问 [http://localhost:3000](http://localhost:3000)， 你看到下面的页面就代表操作成功了。
 
-![Home](https://gitee.com/lqsong/public/raw/master/admin-element-vue-vite-ts/home.png)
+![Home](http://admin-element-vue.liqingsong.cc/tsv2/images/indexlayout/home1.png)
 
 接下来你可以修改代码进行业务开发了，本项目内建了常见的页面模板、模拟数据、全局路由等等各种实用的功能来辅助开发，你可以继续阅读和探索左侧的其它文档。
 

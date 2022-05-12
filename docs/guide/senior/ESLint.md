@@ -14,7 +14,7 @@
 每次保存，vscode 就能标红不符合 eslint 规则的地方，同时还会做一些简单的自我修正。安装步骤如下：
 
 首先安装 eslint 插件
-![vscode-eslint.png](https://gitee.com/lqsong/public/raw/master/admin-element-vue/vscode-eslint.png)
+![vscode-eslint.png](http://admin-element-vue.liqingsong.cc/tsv2/images/vscode-eslint.png)
 
 安装并配置完成 ESLint 后，我们继续回到 VSCode 进行扩展设置，依次点击 文件 > 首选项 > 设置 > 扩展 > ESLint > 在 settings.json 中编辑 打开 VSCode 配置文件,添加如下配置
 
