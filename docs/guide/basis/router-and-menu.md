@@ -195,7 +195,7 @@ const IndexLayoutRoutes: RoutesDataItem[] = [
 
 一般侧边栏有两种形式即：`SubMenu` 和 直接 `Menu.Item`。 一个是嵌套子菜单，另一个则是直接一个链接。如下图：
 
-![](https://gitee.com/lqsong/public/raw/master/admin-element-vue/menu-demo.png)
+<img :src="$withBase('/images/menu-demo.png')" alt="">
 
 在 `@/layouts/IndexLayout/components/SiderMenuItem.vue` 中已经帮你做了判断，当你一个路由下面的子路由`children` 声明的路由大于>0 个时，自动会变成嵌套的模式。如果子路由不存在则直接显示一个链接。
 
@@ -282,8 +282,8 @@ export default IndexLayoutRoutes;
 
 本项目 `IndexLayout` 中封装了一个面包屑导航，它是通过监听路由变化动态生成的。它和 menu 也一样，也可以通过之前那些配置项控制一些路由在面包屑中的展现。你可以结合自己的业务需求增改这些自定义属性。参照 [配置参数](#配置参数) 中的 `breadcrumb` 参数
 
-![](https://gitee.com/lqsong/public/raw/master/admin-element-vue/breadcrumb.png)
-![](https://gitee.com/lqsong/public/raw/master/admin-element-vue/breadcrumb-cus.png)
+<img :src="$withBase('/images/breadcrumb.png')" alt="">
+<img :src="$withBase('/images/breadcrumb-cus.png')" alt="">
 
 ::: tip 代码地址
 [@/layouts/IndexLayout](https://github.com/lqsong/admin-element-vue/blob/typescript.v2/src/layouts/IndexLayout/index.vue)
@@ -321,7 +321,7 @@ export default IndexLayoutRoutes;
 
 本项目 `IndexLayout` 中封装了一个`TabNav`，它是通过监听路由变化动态生成的。它可以通过配置项控制存储规则和关闭回调。你可以结合自己的业务需求增改这些自定义属性。参照 [配置参数](#配置参数) 中的 `tabNavType` 和 `tabNavCloseBefore` 参数
 
-![](https://gitee.com/lqsong/public/raw/master/admin-element-vue/tabnav.png)
+<img :src="$withBase('/images/tabnav.png')" alt="">
 
 **样例：**
 ```js

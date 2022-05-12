@@ -17,8 +17,8 @@
 
 |图片预览|
 :-------------------------:
-| ![Home](https://gitee.com/lqsong/public/raw/master/electron-admin-element-vue/admin1.png)  |
-| ![Home](https://gitee.com/lqsong/public/raw/master/electron-admin-element-vue/admin2.png)  |
+| <img :src="$withBase('/images/electron-admin-element-vue/admin1.png')" alt="">  |
+| <img :src="$withBase('/images/electron-admin-element-vue/admin2.png')" alt="">  |
 
 
 ## 目录结构
@@ -59,7 +59,7 @@ npm run electron:serve
 
 启动完成后会，会自动打开 `Electron` 窗口， 你看到下面的窗口就代表操作成功了。
 
-![Home](https://gitee.com/lqsong/public/raw/master/electron-admin-element-vue/admin1.png)
+<img :src="$withBase('/images/electron-admin-element-vue/admin1.png')" alt="">
 
 
 ## 配置
