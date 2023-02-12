@@ -40,6 +40,12 @@ module.exports = [
     {
         text: '生态',
         items: [
+            {
+            text: '框架模板',
+                items: [
+                    {text: 'frame-template-vue', link: 'http://frame-template-vue.liqingsong.cc'},
+                ],
+            },
           {
             text: '后台框架',
             items: [
@@ -55,11 +61,10 @@ module.exports = [
           {
             text: '前台框架',
             items: [
-              {
-                text: 'midway-vue3-ssr',
-                link: 'http://midway-vue3-ssr.liqingsong.cc'
-              }
-            ],
+                {text: 'midway-vue3-ssr', link: 'http://midway-vue3-ssr.liqingsong.cc'},
+                {text: 'midway-react-ssr', link: 'http://midway-react-ssr.liqingsong.cc'},
+                {text: 'template-vant-vue', link: 'http://template-vant-vue.liqingsong.cc'},
+              ],
           },
           
         ],
@@ -70,6 +75,7 @@ module.exports = [
             {
                 text: '其他版本',
                 items: [
+                    {text: 'vite.ts2', link: 'http://admin-element-vue.liqingsong.cc/vitets2/'},
                     {text: 'ts.v2', link: 'http://admin-element-vue.liqingsong.cc/tsv2/'},
                     {text: 'js.v1', link: 'http://admin-element-vue.liqingsong.cc/jsv1/'},
                 ] 

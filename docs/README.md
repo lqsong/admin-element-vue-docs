@@ -10,7 +10,7 @@ features:
 - title: 主题布局
   details: 支持多种动态布局，自定义换肤。
 - title: 最新技术栈
-  details: 使用 Vite/Vue3.x/Element Plus/TypeScript/Axios 等前端前沿技术开发。
+  details: 使用 Vite/Vue3.x/Vuex/Element Plus/TypeScript/Axios 等前端前沿技术开发。
 - title: 国际化
   details: 内建业界通用的国际化方案。
 - title: Mock 数据
