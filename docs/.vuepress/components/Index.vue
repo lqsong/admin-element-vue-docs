@@ -1,23 +1,29 @@
 <template>
     <div class="index">
+        
+        <h3 >基于Vite构建</h3>
+        <div class="index-con">
+            <a class="index-con-li" href="/vitets2/">
+                <h2>TypeScript <Badge text="2"/></h2>
+                <p>Element Plus Pinia Vue3.x Admin</p>
+            </a>
+            <a class="index-con-li" href="/vitets/">
+                <h2>TypeScript </h2>
+                <p>Element Plus Vuex Vue3.x Admin</p>
+            </a>
+            
+        </div>
+
         <h3 >基于Webpack构建</h3>
         <div class="index-con">
             <a class="index-con-li" href="/tsv2/">
                 <h2>TypeScript <Badge text="v2"/></h2>
-                <p>Element Plus Vue3.x Admin</p>
+                <p>Element Plus Vuex Vue3.x Admin</p>
             </a>
             <a class="index-con-li" href="/jsv1/">
                 <h2>JavaScript <Badge text="v1"/></h2>
-                <p>Element-ui Vue2.x Admin</p>
+                <p>Element-ui Vuex Vue2.x Admin</p>
             </a>
-        </div>
-        <h3 >基于Vite构建</h3>
-        <div class="index-con">
-            <a class="index-con-li" href="/vitets/">
-                <h2>TypeScript </h2>
-                <p>Element Plus Vue3.x Admin</p>
-            </a>
-            
         </div>
     </div>
 </template>
