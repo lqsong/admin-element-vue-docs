@@ -30,12 +30,32 @@ module.exports = [
     {
         text: '生态',
 		items: [
-            {text: 'admin-antd-vue', link: 'http://admin-antd-vue.liqingsong.cc'},
-            {text: 'admin-antd-react', link: 'http://admin-antd-react.liqingsong.cc'},
-            {text: 'electron-admin-element-vue', link: 'http://admin-element-vue.liqingsong.cc/tsv2/guide/senior/electron.html'},
-            {text: 'electron-admin-antd-vue', link: 'http://admin-antd-vue.liqingsong.cc/webpackts/guide/senior/electron.html'},
-            {text: 'electron-admin-antd-react', link: 'http://admin-antd-react.liqingsong.cc/guide/senior/electron.html'},
-            {text: 'admin-vue3-micro-qiankun', link: 'http://admin-vue3-micro-qiankun.liqingsong.cc'},
+            {
+                text: '框架模板',
+                items: [
+                  {text: 'frame-template-vue', link: 'http://frame-template-vue.liqingsong.cc'},
+                ],
+              },
+              {
+                text: '后台框架',
+                items: [
+                  {text: 'admin-element-vue', link: 'http://admin-element-vue.liqingsong.cc'},
+                  {text: 'admin-antd-vue', link: 'http://admin-antd-vue.liqingsong.cc'},
+                  {text: 'admin-antd-react', link: 'http://admin-antd-react.liqingsong.cc'},
+                  {text: 'electron-admin-element-vue', link: 'http://admin-element-vue.liqingsong.cc/tsv2/guide/senior/electron.html'},
+                  {text: 'electron-admin-antd-vue', link: 'http://admin-antd-vue.liqingsong.cc/webpackts/guide/senior/electron.html'},
+                  {text: 'electron-admin-antd-react', link: 'http://admin-antd-react.liqingsong.cc/guide/senior/electron.html'},
+                  {text: 'admin-vue3-micro-qiankun', link: 'http://admin-vue3-micro-qiankun.liqingsong.cc'},
+                ],
+              },
+              {
+                text: '前台框架',
+                items: [
+                  {text: 'midway-vue3-ssr', link: 'http://midway-vue3-ssr.liqingsong.cc'},
+                  {text: 'midway-react-ssr', link: 'http://midway-react-ssr.liqingsong.cc'},
+                  {text: 'template-vant-vue', link: 'http://template-vant-vue.liqingsong.cc'},
+                ],
+              },
         ]
     },
     {
@@ -45,6 +65,7 @@ module.exports = [
                 text: '其他版本',
                 items: [
                     {text: 'ts.v2', link: 'http://admin-element-vue.liqingsong.cc/tsv2/'},
+                    {text: 'vite.ts2', link: 'http://admin-element-vue.liqingsong.cc/vitets2/'},
                     {text: 'vite.ts', link: 'http://admin-element-vue.liqingsong.cc/vitets/'},
                 ] 
             }            
